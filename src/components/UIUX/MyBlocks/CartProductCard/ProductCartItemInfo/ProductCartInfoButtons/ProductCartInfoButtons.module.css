@@ -1,0 +1,12 @@
+.addingBtnBlock{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.addingBtn{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #003767;
+    cursor: pointer;
+}

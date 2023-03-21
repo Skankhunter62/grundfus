@@ -1,0 +1,15 @@
+.ProductLoopAsideAttributesVisible,
+.ProductLoopAsideAttributes{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.ProductLoopAsideAttributes{margin-bottom: 15px;}
+.ProductLoopAsideAttributesList{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.ProductLoopAsideAttributesListDisable{
+    display: none;
+}

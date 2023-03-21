@@ -1,0 +1,23 @@
+.mainBlockLayout{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.twoColumnLayout{
+    max-width: 1290px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding-top: 50px;
+}
+
+.mainContent{
+    width: 960px;
+    height: 100%;
+}
+.container{
+    width: 1290px;
+    margin: 0 auto;
+}

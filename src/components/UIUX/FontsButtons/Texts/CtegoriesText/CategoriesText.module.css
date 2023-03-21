@@ -1,0 +1,18 @@
+.CategoriesText{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #003767;
+    cursor: pointer;
+}
+.CategoriesText:hover{
+    color: var(--main-background-color);
+    transition: color 0.1s;
+}
+.CategoriesTextActive{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--main-background-color);
+    cursor: pointer;
+}

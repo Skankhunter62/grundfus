@@ -1,0 +1,8 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.content{
+    margin-bottom: 460px;
+}

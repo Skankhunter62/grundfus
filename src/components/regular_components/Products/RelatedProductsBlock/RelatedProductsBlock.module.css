@@ -1,0 +1,72 @@
+.mainRelatedSmallBlock {
+  width: 268px;
+  height: 89px;
+  border: 1px solid #003767;
+  background-color: #ffffff;
+  border-radius: 2px;
+  gap: 5px;
+  display: flex;
+}
+.relatedProductImg {
+  display: flex;
+  align-items: center;
+}
+.singleRelatedImg {
+  width: 90px;
+  height: 60px;
+  object-fit: contain;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.relatedProductInfo {
+  width: 100%;
+  padding: 6px 12px 6px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.relatedProductTitle {
+  height: 33px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 150%;
+  color: #003767;
+  overflow: hidden;
+}
+.relatedProductTitle:hover {
+  color: var(--main-background-color);
+  transition: color 0.25s ease;
+}
+.relatedProductPriceCart {
+  margin-top: 12px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.relatedProductPrice {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  background: linear-gradient(89.89deg, #383937 -0.47%, #383937 106%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.relatedProductButton {
+  padding: 4px 16px;
+  background: #003767;
+  border: 1px solid #003767;
+  border-radius: 2px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+}
+.relatedProductButton:hover {
+  background-color: var(--main-background-color);
+  transition: all 0.25s ease;
+  cursor: pointer;
+  border: 1px solid var(--main-background-color);
+}

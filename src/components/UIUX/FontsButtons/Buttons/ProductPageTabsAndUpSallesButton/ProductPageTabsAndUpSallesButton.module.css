@@ -1,0 +1,37 @@
+.ProductPageTabsAndUpSallesButton,
+.ProductPageTabsAndUpSallesButtonDisactive,
+.ProductPageTabsButton,
+.ProductPageTabsButtonDisactive {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #003767;
+  background: #fff;
+  border: 1px solid #003767;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+  border-radius: 2px;
+  padding: 5px 26px;
+  cursor: pointer;
+}
+.ProductPageTabsAndUpSallesButtonDisactive,
+.ProductPageTabsButtonDisactive {
+  color: #667085;
+  background-color: #fff;
+  border: 1px solid #94979c;
+  cursor: pointer;
+}
+.ProductPageTabsButtonDisactive:hover {
+  background-color: #003767;
+  color: #fff;
+  transition: all 0.25s ease;
+}
+
+.ProductPageTabsButton,
+.ProductPageTabsAndUpSallesButton {
+  cursor: initial;
+}
+
+.ProductPageTabsButton,
+.ProductPageTabsButtonDisactive {
+  padding: 10px 57px;
+}

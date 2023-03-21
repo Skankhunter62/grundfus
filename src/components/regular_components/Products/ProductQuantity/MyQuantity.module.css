@@ -1,0 +1,28 @@
+.mainMyQuantityBlock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 124px;
+    height: 36px;
+}
+.myQuantitySingleBlock{
+    width: 36px;
+    height: 36px;
+    border: 1px solid #94979c;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #667085;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    cursor: pointer;
+    background-color: transparent;
+    user-select: none;
+}
+
+.disable{
+    background-color: #eeeeee;
+}

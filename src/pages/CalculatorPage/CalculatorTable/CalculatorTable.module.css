@@ -1,0 +1,38 @@
+.CalculatorFieldTitle {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  margin-bottom: 14px;
+  color: #003767;
+}
+.Wrapper {
+  display: grid;
+  grid-template-columns: 200px 410px;
+  grid-column-gap: 40px;
+}
+
+.TableWrapper {
+  border: 1px solid #94979c;
+  border-radius: 4px;
+  width: 430px;
+  padding: 20px;
+}
+.Table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.Table td,
+.Table th {
+  padding: 8px;
+}
+.Table tr td:last-child {
+  text-align: right;
+}
+.Table tr:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+.Table tr:hover {
+  background-color: #ddd;
+}

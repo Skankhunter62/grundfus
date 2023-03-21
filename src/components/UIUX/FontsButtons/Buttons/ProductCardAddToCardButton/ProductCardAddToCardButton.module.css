@@ -1,0 +1,36 @@
+.ProductCardAddToCardButton{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--main-text-color);
+    background: var(--main-white);
+    border: 1px solid var(--main-text-color);
+    border-radius: 2px;
+    padding: 8px 16px;
+    cursor: pointer;
+    /*animation effect*/
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.ProductCardAddToCardButtonCatalog{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    background: var(--main-text-color);
+    color: var(--main-white);
+    border: 1px solid var(--main-text-color);
+    border-radius: 2px;
+    padding: 8px 16px;
+    cursor: pointer;
+    /*animation effect*/
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.ProductCardAddToCardButton:active {transform: scale(.95);}
+.ProductCardAddToCardButton:hover {background-color: #f6f6f6; transform: scale(.98);}
+
+.ProductCardAddToCardButtonCatalog:active {transform: scale(.95);}
+.ProductCardAddToCardButtonCatalog:hover {background-color: #003d72; transform: scale(.98);}

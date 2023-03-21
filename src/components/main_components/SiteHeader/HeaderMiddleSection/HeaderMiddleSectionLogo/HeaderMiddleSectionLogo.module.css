@@ -1,0 +1,39 @@
+.headerMiddleSectionLogoBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.headerMiddleSectionLogoImg{
+    width: 232px;
+    height: 42px;
+}
+.headerMiddleSectionLogoText{
+    font-size: 12px;
+    line-height: 150%;
+    font-weight: 500;
+    color: var(--main-text-color);
+    letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: 768px){
+    .headerMiddleSectionLogoImg{ width: 200px; }
+}
+
+@media screen and (max-width: 576px){
+    .headerMiddleSectionLogoImg{ width: 175px; }
+    .headerMiddleSectionLogoText{ font-size: 10px; }
+}
+
+@media screen and (max-width: 480px){
+    .headerMiddleSectionLogoImg{
+        width: 132px;
+        height: 24px;
+    }
+    .headerMiddleSectionLogoText{
+        font-weight: 500;
+        font-size: 8px;
+        line-height: 150%;
+        text-align: center;
+    }
+}

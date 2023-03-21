@@ -1,0 +1,24 @@
+.HeaderMiddleSectionActionBlock{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+@media screen and (max-width: 1200px){
+    .HeaderMiddleSectionActionBlock{ gap: 25px; }
+}
+
+@media screen and (max-width: 576px){
+    .HeaderMiddleSectionActionBlock{
+        grid-column: 3;
+        grid-row: 1;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .HeaderMiddleSectionActionBlock{
+        display: none;
+    }
+}

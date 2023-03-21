@@ -1,0 +1,10 @@
+.HeaderBottomRightSection{
+    display: flex;
+    gap: 30px;
+}
+.HeaderBottomRightSectionLnk a:hover{
+    color: #ff4822;
+}
+@media screen and (max-width: 576px){
+    .HeaderBottomRightSection{ display: none; }
+}

@@ -1,0 +1,24 @@
+.headerTopSectionRightSection{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.headerTopSectionRightSectionPhonesBlock{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.headerTopSectionRightSectionPhones{
+    display: flex;
+    gap: 5px;
+}
+
+@media screen and (max-width: 992px){
+    .headerTopSectionRightSectionPhonesBlock{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}

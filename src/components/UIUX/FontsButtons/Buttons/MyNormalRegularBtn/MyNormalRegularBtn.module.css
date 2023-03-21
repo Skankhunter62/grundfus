@@ -1,0 +1,26 @@
+.myNormalRegularBtn {
+  background-color: #ffffff;
+  border: 1px solid #94979c;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
+  border-radius: 2px;
+  padding: 10px 40px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #667085;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 1s, color 0.25s, background-color 0.25s;
+}
+.myNormalRegularBtnDisable {
+  border: 1px solid #003767;
+  background-color: #fff;
+  color: #003767;
+  cursor: pointer;
+}
+.myNormalRegularBtn:hover {
+  /* background-color: #003767;
+  color: #ffffff; */
+  /* transform: scale(1.01); */
+}

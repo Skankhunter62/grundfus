@@ -1,0 +1,18 @@
+.quantityButtonBlock{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.qntButtons{
+    width: 124px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cartButtons{
+    width: 271px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

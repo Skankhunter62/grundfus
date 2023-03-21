@@ -1,0 +1,16 @@
+.single_post{
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+    border-radius: 2px;
+    padding: 30px;
+}
+.sub_body_post_component{
+    width: 67%;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #ff4822;
+}
+.single_post_title_block{margin-bottom: 16px;}
+.sub_body_post_component:last-child{margin-top: 16px;}

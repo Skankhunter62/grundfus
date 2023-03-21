@@ -1,0 +1,32 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.arrow_up {
+  user-select: none;
+  position: absolute;
+  top: 13px;
+  right: 16px;
+  z-index: 2;
+  cursor: pointer;
+}
+.arrow_down {
+  user-select: none;
+  position: absolute;
+  bottom: 13px;
+  right: 16px;
+  z-index: 2;
+  cursor: pointer;
+}
+.inputWrapper {
+  margin-top: 14px;
+  position: relative;
+  width: 300px;
+}

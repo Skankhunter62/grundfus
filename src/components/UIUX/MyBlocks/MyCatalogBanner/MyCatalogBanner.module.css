@@ -1,0 +1,23 @@
+.bannerImg{
+    height: 142px;
+    width: 100%;
+    object-fit: cover;
+}
+.bannerWrapper{
+    position: relative;
+}
+.h1Section{
+    width: 1290px;
+    margin: 0 auto;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+}
+.bannerH1{
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+}

@@ -1,0 +1,9 @@
+.breadCrumbsLayout{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 400;
+    font-size: 14px;
+    color: #003767;
+    gap: 5px;
+}

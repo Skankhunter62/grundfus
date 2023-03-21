@@ -1,0 +1,42 @@
+.removeAll{
+    width: 100%;
+    height: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
+    border-radius: 2px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.leftPart{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.checkboxBlock{
+    display: flex;
+    align-items: center;
+}
+.checkAll{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #003767;
+}
+.regularText{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #003767;
+    cursor: pointer;
+}
+.regularTextDisabled{
+    color: #3f4c67;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}

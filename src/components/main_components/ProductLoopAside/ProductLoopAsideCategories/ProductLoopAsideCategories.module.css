@@ -1,0 +1,20 @@
+.ProductLoopAsideCategoriesVisible,
+.ProductLoopAsideCategories{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.ProductLoopAsideCategories{margin-bottom: 15px;}
+.ProductLoopAsideCategoriesList{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+.ProductLoopAsideCategoriesListItem{
+    cursor: pointer;
+}
+.ProductLoopAsideCategoriesListDisable{
+    display: none;
+}

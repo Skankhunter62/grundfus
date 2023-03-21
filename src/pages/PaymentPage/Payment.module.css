@@ -1,0 +1,18 @@
+.PaymentMainContainer{ width: 100%; }
+.PaymentWrapper{
+    max-width: 1290px;
+    margin: 0 auto;
+}
+.PaymentWrapperBlock{
+    margin: 0 10px;
+}
+.PaymentPageTitleBlock{
+    padding: 25px 0 0 0;
+}
+.PaymentPageTitle{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #003767;
+}

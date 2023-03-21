@@ -1,0 +1,41 @@
+/*sorting section*/
+.sortingSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  padding-inline: 2px;
+}
+
+/*layout buttons*/
+.catalogLayoutButtons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+}
+/*BreadCrumbs*/
+.breadcrumbs {
+}
+/*sorting right block*/
+.sortingRightSection {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #003767;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+/*query*/
+@media only screen and (max-width: 768px) {
+  .breadcrumbs {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .sortingSection {
+    display: flex;
+    gap: 15px;
+  }
+}

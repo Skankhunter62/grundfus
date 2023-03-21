@@ -1,0 +1,2 @@
+This button used on product page (product tabs)
+transparent background and blue text

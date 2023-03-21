@@ -1,0 +1,12 @@
+.myRegularSliderBlock{
+    margin: 100px 15px 0px 15px;
+}
+.MyRegularSliderBlockLoader{
+    height: 440px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #003767;
+    opacity: 0.6;
+}

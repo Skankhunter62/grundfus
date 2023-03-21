@@ -1,0 +1,20 @@
+.attributesBlock {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.attributeRowLayout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1200px) {
+  .attributesBlock {
+    width: 100%;
+  }
+}

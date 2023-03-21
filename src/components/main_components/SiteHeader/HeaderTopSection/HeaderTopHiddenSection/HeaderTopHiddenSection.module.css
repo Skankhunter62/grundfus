@@ -1,0 +1,48 @@
+.headerTopSectionLaptopHidden,
+.HeaderTopHiddenSectionMobileWorkBlock{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.headerTopSectionLaptopHiddenText {
+    display: flex;
+    align-items: center;
+}
+
+.headerTopSectionLaptopHiddenTextMobileIcons,
+.HeaderTopHiddenSectionMobileBottomPhones {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .headerTopSectionLaptopHiddenText {
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .headerTopSectionLaptopHiddenText {
+        flex-direction: row;
+    }
+
+    .headerTopSectionLaptopHiddenTextMobileIcons {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .HeaderTopHiddenSectionMobileBottomPhone,
+    .HeaderTopHiddenSectionMobileWorkBlock {
+        display: none;
+    }
+
+    .HeaderTopHiddenSectionMobileBottomPhones {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+}

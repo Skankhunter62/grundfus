@@ -1,0 +1,9 @@
+.gridProductCardTitleRatingSkuBlock{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.test {
+    max-width: 110px;
+}

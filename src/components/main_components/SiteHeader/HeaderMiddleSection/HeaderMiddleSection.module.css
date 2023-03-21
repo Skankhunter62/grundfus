@@ -1,0 +1,20 @@
+.headerMiddleSection{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 15px;
+    align-items: center;
+    justify-items: center;
+    padding-top: 16px;
+}
+
+@media screen and (max-width: 768px){
+    .headerMiddleSection{grid-column-gap: 10px;}
+}
+
+@media screen and (max-width: 576px){
+    .headerMiddleSection{grid-template-columns: repeat(4, 1fr);}
+}
+
+@media screen and (max-width: 400px){
+    .headerMiddleSection{grid-template-columns: repeat(3, 1fr);}
+}

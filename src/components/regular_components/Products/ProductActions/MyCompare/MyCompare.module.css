@@ -1,0 +1,46 @@
+.compareBlock {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.circleIcon {
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+}
+.circleIcon:hover {
+  background-color: #ff4822;
+}
+.circleIcon:hover svg path {
+  fill: #ffffff;
+}
+.compareBlockPosition {
+  position: relative;
+}
+.compareBlockPosition:hover svg path {
+  fill: #ff4822;
+  transition: 0.25s ease;
+}
+.actionButton {
+  width: 25px;
+  height: 25px;
+}
+.countSpan {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  border-radius: 50%;
+  width: 20px;
+  line-height: 20px;
+  background-color: #ff4822;
+  color: #ffffff;
+  text-align: center;
+}

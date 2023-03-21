@@ -1,0 +1,15 @@
+.ProductLoopAside {
+  width: 300px;
+  min-width: 227px;
+  background-color: #ffffff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .ProductLoopAside {
+    display: none;
+  }
+}

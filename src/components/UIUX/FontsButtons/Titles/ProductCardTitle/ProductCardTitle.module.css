@@ -1,0 +1,16 @@
+
+
+.titleStyles{
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #003767;
+    height: 53px;
+    overflow: hidden;
+}
+.titleStyles:hover {
+    transition: color .25s ease;
+    color: var(--main-background-color)
+}

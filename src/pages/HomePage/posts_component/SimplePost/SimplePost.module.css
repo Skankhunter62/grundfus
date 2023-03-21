@@ -1,0 +1,24 @@
+.SimplePostLayout{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    align-self: center;
+    justify-content: space-between;
+    margin: 140px 10px 0px 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .SimplePostLayout{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .SimplePostLayout{
+        margin-top: 30px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.5fr;
+        justify-items: center;
+    }
+}

@@ -1,0 +1,27 @@
+.myProductsCompareAttributesBlock{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-items: center;
+}
+.attributesBlock{
+    width: 1290px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 60px;
+}
+.attributeDefaultTitle{
+    width: inherit;
+    display: flex;
+    align-self: flex-start;
+}
+.MyProductsCompareAttributesBlock{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    justify-items: center;
+}

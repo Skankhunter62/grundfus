@@ -1,0 +1,15 @@
+.productCartItemImgBlock{
+    width: 180px;
+    height: 145px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.img{
+    height: 150px;
+    width: 145px;
+    padding: 5px;
+    object-fit: contain;
+}

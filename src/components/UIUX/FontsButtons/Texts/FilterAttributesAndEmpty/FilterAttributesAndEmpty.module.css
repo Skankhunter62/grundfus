@@ -1,0 +1,14 @@
+.FilterAttributesAndEmpty{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #003767;
+}
+
+.FilterAttributesEmpty{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /*text-align: center;*/
+    color: #003767;
+}

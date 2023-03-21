@@ -1,0 +1,15 @@
+.actionButton{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #003767;
+}
+.iconStyles{
+    width: 32px;
+    height: 32px;
+}
+.iconsBlock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

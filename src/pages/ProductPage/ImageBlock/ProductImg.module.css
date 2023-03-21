@@ -1,0 +1,12 @@
+.productImgBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.productCarousel{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 80px));
+    grid-column-gap: 15px;
+    grid-row-gap: 20px;
+}

@@ -1,0 +1,33 @@
+.paginationBlock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 16px;
+}
+.activePaginationPage{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    color: #d9d9d9;
+    padding: 4px 10px;
+    background-color: #ff4822;
+    border-radius: 2px;
+    cursor: pointer;
+    align-self: center;
+}
+.singlePaginationPage{
+    color: #003767;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    cursor: pointer;
+    align-self: center;
+}
+.arrowStyle{
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+}

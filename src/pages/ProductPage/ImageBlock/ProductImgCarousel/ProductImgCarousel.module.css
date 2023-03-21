@@ -1,0 +1,19 @@
+/*main styles of carousel img block*/
+.singleCarouselImg{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    overflow: hidden;
+    border: 1px solid #003767;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+/*main styles of small carousel img*/
+.img{height: 80px; width: 80px ;padding: 5px;}
+/*active img block*/
+.activeCarouselImg{
+    border: 2px solid #003767;
+    cursor: pointer;
+}

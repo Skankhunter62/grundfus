@@ -1,0 +1,23 @@
+.DefaultText{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--main-text-color);
+}
+.DefaultText:hover{
+    color: #000;
+}
+
+.DefaultTextPayment a:hover {
+    color: var(--main-background-color);
+    transition: color 0.25s ease-out;
+}
+.DefaultTextPayment{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--main-text-color);
+}
+
+@media screen and (max-width: 400px) {   .DefaultTextPayment{ font-size: 12px; }  }
+@media screen and (max-width: 300px) {   .DefaultTextPayment{ font-size: 10px; }  }

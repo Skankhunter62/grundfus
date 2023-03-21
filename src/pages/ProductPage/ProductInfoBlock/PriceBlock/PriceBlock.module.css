@@ -1,0 +1,26 @@
+.priceBlock{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.regularPrice{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    background: linear-gradient(89.89deg, #383937 -0.47%, #383937 106%);
+    -webkit-background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+    color: #383937;
+}
+.salePrice{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #ff4822;
+}
+del {
+    text-decoration: line-through;
+}

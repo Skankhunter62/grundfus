@@ -1,0 +1,31 @@
+.gridProductCartImgBlock {
+  margin: auto;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  /* width: 308px; */
+  width: auto;
+}
+.gridProductCartImgBlock img {
+  max-width: 260px;
+}
+@media screen and (max-width: 1200px) {
+  .gridProductCartImgBlock {
+    height: 225px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .gridProductCartImgBlock {
+    height: 250px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .gridProductCartImgBlock {
+    height: 250px;
+  }
+}

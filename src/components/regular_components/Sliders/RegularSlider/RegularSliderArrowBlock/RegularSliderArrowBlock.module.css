@@ -1,0 +1,33 @@
+.myRegularSliderArrowSection {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+.myRegularSliderArrowBlock:last-child:after {
+  content: url("../../../../../assets/icons/slider_icons/arrow_slider_next.svg");
+}
+.myRegularSliderArrowBlock:first-child:after {
+  content: url("../../../../../assets/icons/slider_icons/arrow_slider_prev.svg");
+}
+.myRegularSliderArrowBlock {
+  width: 44px;
+  height: 48px;
+  background-color: #ffffff;
+  border: 1px solid #003767;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myRegularSliderArrowBlock:hover {
+  cursor: pointer;
+  background-color: #003767;
+  transition: 0.25s ease;
+}
+.myRegularSliderArrowBlock:hover:last-child:after {
+  content: url("../../../../../assets/icons/slider_icons/arrow_slider_next_white.svg");
+}
+.myRegularSliderArrowBlock:hover:first-child:after {
+  content: url("../../../../../assets/icons/slider_icons/arrow_slider_prev_white.svg");
+}

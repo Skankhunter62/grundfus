@@ -1,0 +1,40 @@
+.myHeaderMenuSingleLink{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--main-text-color);
+}
+.myHeaderMenuSingleLink:hover {
+    color: var(--main-background-color);
+    transition: color 0.25s ease;
+}
+.myHeaderMenuSingleLinkActive{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--main-white);
+    padding: 4px 20px;
+    border-radius: 4px;
+    background-color: var(--main-background-color);
+}
+
+@media screen and (max-width: 992px){
+    .myHeaderMenuSingleLink{ display: none;}
+}
+
+@media screen and (max-width: 768px) {
+    .myHeaderMenuSingleLinkActive{
+        padding: 5px 40px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .myHeaderMenuSingleLink{
+        display: flex;
+        color: var(--main-white);
+    }
+    .myHeaderMenuSingleLinkActive{
+        font-size: 13px;
+        padding: 4px 15px;
+    }
+}

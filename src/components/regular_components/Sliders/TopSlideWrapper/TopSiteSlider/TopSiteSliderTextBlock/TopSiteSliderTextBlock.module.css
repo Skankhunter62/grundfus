@@ -1,0 +1,77 @@
+.TopSiteSliderTextBlock {
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+
+.TopSiteSliderTextBlockTitle,
+.TopSiteSliderTextBlockSpan {
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    color: var(--main-white);
+}
+
+.TopSiteSliderTextBlockSpan {
+    color: var(--main-background-color);
+}
+
+.TopSiteSliderTextBlockText {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--main-white);
+}
+
+@media screen and (max-width: 1200px) {
+    .TopSiteSliderTextBlock {
+        height: 75%;
+        margin-bottom: 0;
+        padding-inline: 10px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .TopSiteSliderTextBlock {
+        height: 90%;
+    }
+
+    .TopSiteSliderTextBlockTitle,
+    .TopSiteSliderTextBlockSpan {
+        font-size: 30px;
+    }
+
+    .TopSiteSliderTextBlockText {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .TopSiteSliderTextBlock {
+        height: 90%;
+    }
+
+    .TopSiteSliderTextBlockTitle,
+    .TopSiteSliderTextBlockSpan {
+        font-size: 25px;
+    }
+
+    .TopSiteSliderTextBlockText {
+        height: 50px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .TopSiteSliderTextBlockTitle,
+    .TopSiteSliderTextBlockSpan {
+        font-size: 25px;
+    }
+    .TopSiteSliderTextBlockText {
+        font-size: 12px;
+    }
+}

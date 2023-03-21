@@ -1,0 +1,8 @@
+.myRegularSliderBlock{
+    width: 90%;
+}
+.sliderBlocks{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

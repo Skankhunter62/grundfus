@@ -1,0 +1,9 @@
+.relatedProductInfoProductBlock{
+    margin-top: 30px;
+}
+.relatedProductBlock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 14px;
+}

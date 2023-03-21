@@ -1,0 +1,74 @@
+.HeaderMiddleSectionSearchBlock {
+  position: relative;
+}
+.HeaderMiddleSectionSearchInput {
+  width: 230px;
+  height: 32px;
+  border: 1px solid #94979c;
+  padding: 8px 8px;
+  background-color: #fafbfc;
+  border-radius: 2px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--main-text-color);
+}
+.HeaderMiddleSectionSearchInput:focus {
+  border: 1px solid #474747;
+}
+.HeaderMiddleSectionSearchInput::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  background-color: rgba(255, 255, 255, 0.0001);
+  color: var(--main-text-color);
+  opacity: 0.4;
+  padding: 5px;
+}
+.HeaderMiddleSectionSearchIconBlock {
+  background-color: transparent;
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+}
+.HeaderMiddleSectionSearchIcon {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .HeaderMiddleSectionSearchInput {
+    display: none;
+  }
+  .HeaderMiddleSectionSearchIconBlock {
+    position: relative;
+    width: 100%;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .HeaderMiddleSectionSearchInput {
+    display: flex;
+    width: 200px;
+  }
+  .HeaderMiddleSectionSearchIconBlock {
+    background-color: transparent;
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    width: inherit;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .HeaderMiddleSectionSearchBlock {
+    display: none;
+  }
+}

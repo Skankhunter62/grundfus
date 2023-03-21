@@ -1,0 +1,29 @@
+.CalculatorFieldTitle {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #003767;
+}
+.CalculatorBottomSectionWrapper {
+  display: grid;
+  grid-template-columns: 410px 520px;
+  column-gap: 134px;
+}
+.CalculatorRadioWrapper {
+  width: 410px;
+}
+.CalculatorPressureWrapper {
+  width: 510px;
+}
+.CalculatorFormControlWrapper {
+  margin-top: 14px;
+}
+
+.CalculatorPressureLabel {
+  margin-top: 14px;
+  padding: 10px 11px;
+  background-color: #fafbfc;
+}
+.CalculatorPressureLabelTip {
+  margin-top: 22px;
+}

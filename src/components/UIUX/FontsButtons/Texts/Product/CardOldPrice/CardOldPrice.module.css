@@ -1,0 +1,11 @@
+.saleStyles{
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+.priceSaleStyling{
+    display: block;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    color: #000000;
+}

@@ -1,0 +1,52 @@
+.main_map_styles {
+  margin-top: 268px;
+  margin-bottom: 232px;
+  position: relative;
+  overflow: hidden;
+}
+.map_city {
+  color: #eee;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+}
+.map_marker {
+  color: #eee;
+  font-size: 12px;
+  position: absolute;
+  top: 14px;
+}
+.map_iframe {
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+.form_block {
+  position: absolute;
+  width: 470px;
+  height: 781px;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
+
+  top: -99px;
+  /* left: 313px; */
+}
+.contacts {
+  border-radius: 2px;
+  position: absolute;
+  /* right: 315px; */
+  margin-left: 500px;
+  width: 792px;
+  height: 147px;
+  z-index: 1;
+  bottom: -81px;
+}
+
+.map_block_wrapper {
+  position: relative;
+}
+.main_container {
+  max-width: 1290px;
+  margin: 0 auto;
+}

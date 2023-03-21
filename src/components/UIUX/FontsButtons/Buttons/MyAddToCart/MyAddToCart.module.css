@@ -1,0 +1,31 @@
+.buttonAddToCartPage {
+  padding: 8px 16px;
+  background-color: #ffffff;
+  border: 1px solid #003767;
+  border-radius: 2px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: #003767;
+  cursor: pointer;
+}
+.buttonAddToCartPage:hover {
+  transition: all 0.25s ease;
+  background-color: #003767;
+  color: #fff;
+}
+.buttonAddToCartCatalog:hover {
+  transition: background-color 0.25s ease;
+  background-color: var(--main-background-color);
+}
+.buttonAddToCartCatalog {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 2px;
+  opacity: 0.9;
+  background-color: #003767;
+  cursor: pointer;
+}

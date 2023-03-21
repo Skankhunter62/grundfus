@@ -1,0 +1,16 @@
+.headerTopSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    background-color: var(--main-white);
+}
+.headerTopSectionHidden{ display: none; }
+
+@media screen and (max-width: 992px){
+    .headerTopSectionHidden{ display: flex; }
+}
+
+@media screen and (max-width: 768px){
+    .headerTopSection{display: none}
+}

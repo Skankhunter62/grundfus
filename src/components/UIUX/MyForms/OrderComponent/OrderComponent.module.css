@@ -1,0 +1,22 @@
+.OrderComponentGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 35px;
+}
+
+.OrderComponentGridLoading{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 35px;
+    opacity: 0.4;
+}
+
+.OrderComponentBlock{
+    position: relative;
+}
+
+.OrderComponentLoader{
+    position: absolute;
+    right: 40%;
+    top: 40%;
+}

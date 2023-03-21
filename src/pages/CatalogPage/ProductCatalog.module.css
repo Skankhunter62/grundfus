@@ -1,0 +1,5 @@
+.catalogMainContent{width: 100%;}
+
+/*query*/
+@media screen and (max-width: 1200px) { .catalogMainLayout{margin: 0;}  .catalogMainContent{width: 100%;}  }
+@media only screen and (max-width: 768px) {  .catalogWrapper{display: flex; flex-direction: column;}  }

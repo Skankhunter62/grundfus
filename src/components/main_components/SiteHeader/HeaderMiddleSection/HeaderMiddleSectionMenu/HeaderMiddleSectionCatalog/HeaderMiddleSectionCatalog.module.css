@@ -1,0 +1,87 @@
+.HeaderMiddleSectionMenuOpenBtn {
+  padding: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--main-text-color);
+  display: none;
+  font-size: 1.8rem;
+}
+.myHeaderMenuSingleLink {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--main-text-color);
+}
+
+.myHeaderMenuSingleLinkActive {
+  position: relative;
+  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--main-white);
+  padding: 4px 20px;
+  border-radius: 4px;
+  background-color: var(--main-background-color);
+}
+.myHeaderMenuSingleLinkActive:hover {
+  background-color: #d72500;
+  transition: background 0.25s ease-out;
+  opacity: 1;
+}
+.myHeaderMenuSingleLinkActive img {
+  margin-right: 20px;
+}
+.myHeaderMenuSubmenu {
+  display: block;
+  position: absolute;
+  margin-top: 32px;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 11;
+}
+
+.myHeaderMenuSubmenu li {
+  color: #003767;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.myHeaderMenuSubmenu li:hover {
+  background-color: #eeeeee;
+}
+
+.myHeaderMenuSingleLinkActive:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 992px) {
+  .myHeaderMenuSingleLink {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .myHeaderMenuSingleLinkActive {
+    padding: 5px 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .myHeaderMenuSingleLink {
+    display: flex;
+    color: var(--main-white);
+  }
+  .myHeaderMenuSingleLinkActive {
+    font-size: 13px;
+    padding: 4px 15px;
+  }
+}
