@@ -3,6 +3,11 @@
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .sortingLeftSection {
+    display: none;
+  }
+}
 @media screen and (max-width: 540px) {
   .sortingLeftSection {
     display: none;

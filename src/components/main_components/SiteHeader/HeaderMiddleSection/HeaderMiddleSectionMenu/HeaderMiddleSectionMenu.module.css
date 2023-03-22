@@ -1,111 +1,120 @@
 .headerMiddleSectionMenuList {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
-.HeaderMiddleSectionMenuOpenBtn{
-    padding: 5px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    color: var(--main-text-color);
-    display: none;
-    font-size: 1.8rem;
+.HeaderMiddleSectionMenuOpenBtn {
+  padding: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--main-text-color);
+  display: none;
+  font-size: 1.8rem;
 }
-.myHeaderMenuSingleLink{
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: var(--main-text-color);
-}
-
-.myHeaderMenuSingleLinkActive{
-    display: flex;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    color: var(--main-white);
-    padding: 4px 20px;
-    border-radius: 4px;
-    background-color: var(--main-background-color);
+.myHeaderMenuSingleLink {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--main-text-color);
 }
 
-@media screen and (max-width: 992px){
-    .myHeaderMenuSingleLink{ display: none;}
+.myHeaderMenuSingleLinkActive {
+  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--main-white);
+  padding: 4px 20px;
+  border-radius: 4px;
+  background-color: var(--main-background-color);
 }
-
-@media screen and (max-width: 768px) {
-    .myHeaderMenuSingleLinkActive{
-        padding: 5px 40px;
-    }
-}
-
-@media screen and (max-width: 576px){
-    .myHeaderMenuSingleLink{
-        display: flex;
-        color: var(--main-white);
-    }
-    .myHeaderMenuSingleLinkActive{
-        font-size: 13px;
-        padding: 4px 15px;
-    }
+.catalogLink {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  background-color: brown;
+  border-radius: 20px;
+  padding: 7px 12px;
 }
 @media screen and (max-width: 992px) {
-    .headerMiddleSectionMenuList {
-        gap: 0;
-    }
+  .myHeaderMenuSingleLink {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .headerMiddleSectionMenuList {
-        grid-column: 2/4;
-    }
+  .myHeaderMenuSingleLinkActive {
+    padding: 5px 40px;
+  }
 }
 
 @media screen and (max-width: 576px) {
-    .HeaderMiddleSectionMenuOpenBtn{
-        display: flex;
-        grid-column: 4;
-        grid-row: 1;
-    }
-    .headerMiddleSectionMenuList{
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: var(--main-white);
-        background-color: var(--main-text-color);
-        gap: 1.5rem;
-        transition: 1s;
-        opacity: 0.96;
-        transform: translateY(-100vh);
-        z-index: 1010;
-    }
-    .HeaderMiddleSectionMenuCloseBtn{
-        color: var(--main-white);
-        display: flex;
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-    }
-    .HeaderMiddleSectionResponsiveMenu{
-        transform: none;
-    }
-    .headerMiddleSectionMenuList {
-        grid-column: 2/3;
-    }
+  .myHeaderMenuSingleLink {
+    display: flex;
+    color: var(--main-white);
+  }
+  .myHeaderMenuSingleLinkActive {
+    font-size: 13px;
+    padding: 4px 15px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .headerMiddleSectionMenuList {
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .headerMiddleSectionMenuList {
+    grid-column: 2/4;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .HeaderMiddleSectionMenuOpenBtn {
+    display: flex;
+    grid-column: 4;
+    grid-row: 1;
+  }
+  .headerMiddleSectionMenuList {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-white);
+    background-color: var(--main-text-color);
+    gap: 1.5rem;
+    transition: 1s;
+    opacity: 0.96;
+    transform: translateY(-100vh);
+    z-index: 1010;
+  }
+  .HeaderMiddleSectionMenuCloseBtn {
+    color: var(--main-white);
+    display: flex;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+  .HeaderMiddleSectionResponsiveMenu {
+    transform: none;
+  }
+  .headerMiddleSectionMenuList {
+    grid-column: 2/3;
+  }
 }
 
 @media screen and (max-width: 400px) {
-    .HeaderMiddleSectionMenuOpenBtn {
-        display: flex;
-        grid-column: 3;
-        grid-row: 1;
-    }
+  .HeaderMiddleSectionMenuOpenBtn {
+    display: flex;
+    grid-column: 3;
+    grid-row: 1;
+  }
 }

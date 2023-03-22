@@ -6,6 +6,7 @@ const MapBlock = () => {
   return (
     <>
       <div className={classes.map_block_wrapper}>
+        {/*Кастомная форма обратной связи*/}
         {/* <div className={classes.main_container}>
           <div className={classes.form_block}>
             <ContactForm />

@@ -7,9 +7,10 @@ import CalculatorSlider from "./CalculatorSlider/CalculatorSlider";
 import CalculatorTable from "./CalculatorTable/CalculatorTable";
 import CalculatorImage from "../../assets/img/Calculator.jpg";
 import CalculatorBottomSection from "./CalculatorBottomSection/CalculatorBottomSection";
-
+import { useWCProductByAllCategories } from "../../WC_WP_API/CustomHooksAndFunctions/wc_hooks/wc_hooks";
 const Calculator = () => {
   const navigate = useNavigate();
+  useWCProductByAllCategories();
 
   const [tableDepth, setTableDepth] = useState(20);
   const [tableDistance, setTableDistance] = useState(10);

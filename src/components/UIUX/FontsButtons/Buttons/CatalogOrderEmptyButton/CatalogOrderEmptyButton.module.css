@@ -1,20 +1,25 @@
 .CatalogOrderEmptyButton,
-.CatalogEmptyButton{
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 150%;
-    color: #FFFFFF;
-    background: #FF4822;
-    box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.25);
-    border-radius: 2px;
-    padding: 10px 30px;
-    cursor: pointer;
+.CatalogEmptyButton {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #ffffff;
+  background: #ff4822;
+  box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  padding: 10px 30px;
+  cursor: pointer;
 }
 
-.CatalogOrderEmptyButton:hover{
-    transition: background 0.25s ease;
-    background: #d72500;
+.CatalogOrderEmptyButton:hover {
+  transition: background 0.25s ease;
+  background: #d72500;
 }
-.CatalogEmptyButton{
-    padding: 10px 57px;
+.CatalogEmptyButton {
+  padding: 10px 57px;
+}
+@media screen and (max-width: 400px) {
+  .CatalogOrderEmptyButton {
+    padding: 5px 10px;
+  }
 }

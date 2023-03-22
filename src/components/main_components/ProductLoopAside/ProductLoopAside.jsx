@@ -9,11 +9,12 @@ const ProductLoopAside = ({
   isCatalog = false,
   changeEmptyFlag,
   emptyProducts = false,
-  isCalculator = false,
 }) => {
   /*remove active attribute list*/
   const [removeFilters, setRemoveFilters] = useState(false);
+  const [notFound, setNotFound] = useState(false);
   const changeRemoveFilter = () => setRemoveFilters(!removeFilters);
+  const changeNotFound = () => setNotFound(!notFound);
   return (
     <aside className={classes.ProductLoopAside}>
       {isCatalog ? (
@@ -29,6 +30,7 @@ const ProductLoopAside = ({
         <ProductLoopAsideFilters
           removeFilters={removeFilters}
           changeEmptyFlag={changeEmptyFlag}
+          changeNotFound={changeNotFound}
           emptyProducts={emptyProducts}
         />
       ) : (

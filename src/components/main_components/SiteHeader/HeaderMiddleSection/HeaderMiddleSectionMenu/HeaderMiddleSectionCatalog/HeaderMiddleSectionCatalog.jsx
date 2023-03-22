@@ -5,12 +5,17 @@ import catalogIcon from "../../../../../../assets/icons/header_icons/top-header_
 import classes from "./HeaderMiddleSectionCatalog.module.css";
 import { useTypedSelector } from "../../../../../../store/hooks/useTypedSelector";
 
-const HeaderMiddleSectionMenuCatalog = ({ children, link }) => {
+const HeaderMiddleSectionMenuCatalog = ({
+  children,
+  link,
+  isMobile,
+  changeNavbarState,
+}) => {
   const [isShown, setIsShown] = useState(false);
   const { categories } = useTypedSelector((state) => state);
-  return (
-    <NavLink
-      to={link}
+  return !isMobile ? (
+    <div
+      // to={link}
       className={classes.myHeaderMenuSingleLinkActive}
       onMouseEnter={() => setIsShown(true)}
       onMouseLeave={() => setIsShown(false)}
@@ -31,7 +36,15 @@ const HeaderMiddleSectionMenuCatalog = ({ children, link }) => {
           )}
         </ul>
       )}
-    </NavLink>
+    </div>
+  ) : (
+    <Link
+      to={"/catalog"}
+      className={classes.myHeaderMenuSingleLinkActive}
+      onClick={changeNavbarState}
+    >
+      {children}
+    </Link>
   );
 };
 

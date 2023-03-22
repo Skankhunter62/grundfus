@@ -20,7 +20,6 @@ import Test from "./components/regular_components/Test/Test";
 function App() {
   /*get products categories*/
   useWCCategoriesList();
-
   return (
     <div className="App">
       <Routes>

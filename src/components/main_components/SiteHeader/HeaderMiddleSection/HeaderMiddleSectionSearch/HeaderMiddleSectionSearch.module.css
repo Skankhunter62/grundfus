@@ -39,8 +39,11 @@
   height: 20px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1230px) {
   .HeaderMiddleSectionSearchInput {
+    display: none;
+  }
+  .HeaderMiddleSectionSearchIcon {
     display: none;
   }
   .HeaderMiddleSectionSearchIconBlock {
@@ -52,8 +55,7 @@
 
 @media screen and (max-width: 992px) {
   .HeaderMiddleSectionSearchInput {
-    display: flex;
-    width: 200px;
+    display: none;
   }
   .HeaderMiddleSectionSearchIconBlock {
     background-color: transparent;

@@ -27,7 +27,7 @@ const TopSiteSlider = () => {
         bulletClass: classes.TopSiteSliderBullet,
         bulletActiveClass: classes.TopSiteSliderBullet_active,
       }}
-      autoplay={{ delay: 5000 }}
+      autoplay={{ delay: 5000000 }}
     >
       {loader ? (
         <SwiperSlide key={Math.random() + 1}>

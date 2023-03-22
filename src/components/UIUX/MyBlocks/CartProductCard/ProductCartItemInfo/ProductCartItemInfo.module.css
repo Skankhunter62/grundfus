@@ -1,9 +1,15 @@
-.productInfoBlock{
-    width: 350px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 20px 0;
+.productInfoBlock {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+@media screen and (max-width: 620px) {
+  .productInfoBlock {
+    width: auto;
+    align-items: center;
+  }
 }

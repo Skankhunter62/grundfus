@@ -1,6 +1,6 @@
 .main_map_styles {
-  margin-top: 268px;
-  margin-bottom: 232px;
+  margin-top: 140px;
+  margin-bottom: 100px;
   position: relative;
   overflow: hidden;
 }
@@ -18,7 +18,7 @@
 }
 .map_iframe {
   width: 100%;
-  height: 600px;
+  height: 500px;
   position: relative;
 }
 .form_block {
@@ -49,4 +49,14 @@
 .main_container {
   max-width: 1290px;
   margin: 0 auto;
+}
+@media screen and (max-width: 1200px) {
+  .main_map_styles {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .map_iframe {
+    width: 100%;
+    height: 300px;
+  }
 }

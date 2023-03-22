@@ -5,7 +5,7 @@ export const getProductsByCalcOption = (
   productsList,
   temporaryArrayOfProducts,
   setTemporaryArrayOfProducts,
-  changeEmptyFlag
+  changeNotFound
 ) => {
   if (productsList.length !== 0 && calcAttributes.length !== 0) {
     let middleArrayIfTemporaryEmpty = [];
@@ -16,11 +16,10 @@ export const getProductsByCalcOption = (
           Number(attribute.options) >= Number(calcAttributes.option)
         ) {
           middleArrayIfTemporaryEmpty.push(product);
-        } else {
-          setTemporaryArrayOfProducts(middleArrayIfTemporaryEmpty);
         }
       });
     });
+    console.log("found calc products! ", middleArrayIfTemporaryEmpty);
     setTemporaryArrayOfProducts(middleArrayIfTemporaryEmpty);
   }
 };

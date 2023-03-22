@@ -1,5 +1,15 @@
-.gridProductCardPriceAddCart{
+.gridProductCardPriceAddCart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1200px) {
+  .gridProductCardPriceAddCart {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 856px) {
+  .gridProductCardPriceAddCart {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+  }
 }

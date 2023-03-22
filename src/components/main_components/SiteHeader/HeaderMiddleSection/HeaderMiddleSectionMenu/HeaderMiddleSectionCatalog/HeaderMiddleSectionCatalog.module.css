@@ -18,6 +18,8 @@
 .myHeaderMenuSingleLinkActive {
   position: relative;
   display: flex;
+  cursor: pointer;
+  user-select: none;
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
@@ -71,7 +73,7 @@
 
 @media screen and (max-width: 768px) {
   .myHeaderMenuSingleLinkActive {
-    padding: 5px 40px;
+    padding: 5px 20px;
   }
 }
 

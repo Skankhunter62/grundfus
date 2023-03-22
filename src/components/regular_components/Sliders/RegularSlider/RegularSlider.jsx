@@ -43,37 +43,46 @@ const RegularSlider = ({
             breakpoints={{
               1440: {
                 slidesPerView: 4,
+                slidesPerGroup: 4,
                 spaceBetweenSlides: 150,
               },
               1024: {
+                slidesPerGroup: 3,
                 slidesPerView: 3,
                 spaceBetweenSlides: 150,
               },
               800: {
+                slidesPerGroup: 2,
                 slidesPerView: 2,
                 spaceBetweenSlides: 150,
               },
               700: {
+                slidesPerGroup: 2,
                 slidesPerView: 2,
                 spaceBetweenSlides: 50,
               },
               600: {
+                slidesPerGroup: 2,
                 slidesPerView: 2,
                 spaceBetweenSlides: 150,
               },
               500: {
+                slidesPerGroup: 1,
                 slidesPerView: 1,
                 spaceBetweenSlides: 150,
               },
               400: {
+                slidesPerGroup: 1,
                 slidesPerView: 1,
                 spaceBetweenSlides: 50,
               },
               300: {
+                slidesPerGroup: 1,
                 slidesPerView: 1,
                 spaceBetweenSlides: 150,
               },
               200: {
+                slidesPerGroup: 1,
                 slidesPerView: 1,
                 spaceBetweenSlides: 150,
               },

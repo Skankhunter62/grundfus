@@ -1,11 +1,16 @@
 .ProductLoopAside {
-  width: 300px;
-  min-width: 227px;
+  min-width: 260px;
+  /* min-width: 227px; */
   background-color: #ffffff;
   padding: 30px;
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+@media screen and (max-width: 856px) {
+  .ProductLoopAside {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {

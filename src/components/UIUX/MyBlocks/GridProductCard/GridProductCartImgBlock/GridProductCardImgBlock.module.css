@@ -18,6 +18,10 @@
   .gridProductCartImgBlock {
     height: 225px;
   }
+  .gridProductCartImgBlock img {
+    width: 150px;
+    height: 150px;
+  }
 }
 @media only screen and (max-width: 992px) {
   .gridProductCartImgBlock {

@@ -4,15 +4,20 @@ import CatalogItemsLoop from "./CatalogItemsLoop/CatalogItemsLoop";
 import { useTypedSelector } from "../../store/hooks/useTypedSelector";
 import { useActions } from "../../store/hooks/useActions";
 import CatalogTopMenu from "./CatalogTopMenu/CatalogTopMenu";
-import { useSortingProductInCatalog } from "../../WC_WP_API/CustomHooksAndFunctions/wc_hooks/wc_hooks";
+import {
+  useSortingProductInCatalog,
+  useWCProductByAllCategories,
+} from "../../WC_WP_API/CustomHooksAndFunctions/wc_hooks/wc_hooks";
 import { addProductsFromCategoryRequest } from "../../custom_functions/ProductsFunctions/ProductsFunctions";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom";
 
 const ProductCatalog = () => {
+  const locationState = useLocation();
   const params = useParams();
   /*get redux store functions*/
-  const { addProducts, addProductsAttributes } = useActions();
+  const { addProducts, addProductsAttributes, removeProducts } = useActions();
   /*get from redux store lists*/
   const {
     categories,
@@ -31,6 +36,7 @@ const ProductCatalog = () => {
   /*create loader flag*/
   const [loading, setLoading] = useState(true);
   /*loader callback function*/
+
   const changeLoading = (value) => setLoading(value);
   /*change product layout*/
   const [grid, setGrid] = useState(true);
@@ -58,14 +64,19 @@ const ProductCatalog = () => {
   }, [params]);
 
   useEffect(() => {
-    if (filterProductsList.length !== 0) {
-      setProductArray([...filterProductsList]);
+    if (locationState.state !== null && locationState.state.fromCalc) {
+      setProductArray([...goodsList]);
       setLoading(false);
-    } else if (productsList.length !== 0) {
-      setProductArray([...productsList]);
-      setLoading(false);
+    } else {
+      if (filterProductsList.length !== 0) {
+        setProductArray([...filterProductsList]);
+        setLoading(false);
+      } else if (productsList.length !== 0) {
+        setProductArray([...productsList]);
+        setLoading(false);
+      }
     }
-  }, [productsList, filterProductsList, goodsList]);
+  }, [productsList, filterProductsList]);
 
   const sorting = useSortingProductInCatalog(productArray, selectedSort);
 

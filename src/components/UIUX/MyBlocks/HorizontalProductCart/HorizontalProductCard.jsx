@@ -7,7 +7,7 @@ import MyCheckboxRemove from "../../MyFunctionalComponents/MyCheckboxRemove/MyCh
 import { useActions } from "../../../../store/hooks/useActions";
 
 const HorizontalProductCard = ({ product, isCatalog, selected = false }) => {
-  const { addMassWishlist } = useActions();
+  const { addMassWishlist, removeMassWishlist } = useActions();
   return (
     <div className={classes.horizontalProductCartWrapper}>
       {!isCatalog ? (
@@ -15,6 +15,7 @@ const HorizontalProductCard = ({ product, isCatalog, selected = false }) => {
           product={product}
           selected={selected}
           stateMassAddItemsObject={addMassWishlist}
+          stateRemoveMassWishlist={removeMassWishlist}
         />
       ) : (
         ""

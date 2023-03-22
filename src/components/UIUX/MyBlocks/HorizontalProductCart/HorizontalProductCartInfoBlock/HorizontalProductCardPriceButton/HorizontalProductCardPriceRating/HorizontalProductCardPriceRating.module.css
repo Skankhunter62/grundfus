@@ -1,5 +1,10 @@
-.priceRatingBlock{
-    display: flex;
-    align-items: center;
-    gap: 25px;
+.priceRatingBlock {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+@media screen and (max-width: 576px) {
+  .priceRatingBlock {
+    display: none;
+  }
 }

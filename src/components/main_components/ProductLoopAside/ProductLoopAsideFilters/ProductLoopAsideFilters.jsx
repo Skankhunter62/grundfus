@@ -14,20 +14,17 @@ import ProductLoopAsideFilterAttribute from "./ProductLoopAsideFilterAttribute/P
 const ProductLoopAsideFilters = ({
   removeFilters,
   changeEmptyFlag,
+  changeNotFound,
   emptyProducts = false,
 }) => {
   /*get lists of products and product attributes from redux store*/
-  const { productAttributes, productsList, singleCategory } = useTypedSelector(
-    (state) => state
-  );
+  const { productAttributes, productsList, singleCategory, goodsList } =
+    useTypedSelector((state) => state);
+
   /*get function which add items to products filter list*/
   const { addProductsToFilterList } = useActions();
   /*list of active attribute names by which we start filtering*/
   const [activeAttributeList, setActiveAttributeList] = useState([]);
-  /*calculator options*/
-  const [calcAttributeList, setCalcAttributeList] = useState([
-    { option: "5", attrName: "Максимальный напор" },
-  ]);
   /*loader element to display filters (important)*/
   const [loading, setLoading] = useState(true);
   /*temporary array of products which created after product filtering*/
@@ -70,20 +67,42 @@ const ProductLoopAsideFilters = ({
     }
   }, [temporaryArrayOfProducts]);
   //   /*check if we do not have active options we push array of default products*/
-  useEffect(() => {
-    if (locationState.state !== null && locationState.state.fromCalc) {
-      getProductsByCalcOption(
-        {
-          option: locationState.state.pressure,
-          attrName: "Максимальный напор",
-        },
-        productsList,
-        temporaryArrayOfProducts,
-        setTemporaryArrayOfProducts,
-        changeEmptyFlag
-      );
-    }
-  }, [productsList]);
+  // useEffect(() => {
+  //   if (
+  //     locationState.state !== null &&
+  //     locationState.state.fromCalc &&
+  //     productsList.length !== 0
+  //   ) {
+  //     getProductsByCalcOption(
+  //       {
+  //         option: locationState.state.pressure,
+  //         attrName: "Максимальный напор",
+  //       },
+  //       productsList,
+  //       temporaryArrayOfProducts,
+  //       setTemporaryArrayOfProducts,
+  //       changeNotFound
+  //     );
+  //   }
+  // }, [productsList]);
+  // useEffect(() => {
+  //   if (
+  //     locationState.state !== null &&
+  //     locationState.state.fromCalc &&
+  //     goodsList.length !== 0
+  //   ) {
+  //     getProductsByCalcOption(
+  //       {
+  //         option: locationState.state.pressure,
+  //         attrName: "Максимальный напор",
+  //       },
+  //       goodsList,
+  //       temporaryArrayOfProducts,
+  //       setTemporaryArrayOfProducts,
+  //       changeNotFound
+  //     );
+  //   }
+  // }, [goodsList]);
   useEffect(() => {
     activeAttributeList.length !== 0
       ? getProductsByFilterOption(
@@ -106,6 +125,7 @@ const ProductLoopAsideFilters = ({
       setActiveAttributeList([]);
     }
   }, [removeFilters]);
+
   return (
     <div className={classes.ProductLoopAsideFilters}>
       {loading ? (
