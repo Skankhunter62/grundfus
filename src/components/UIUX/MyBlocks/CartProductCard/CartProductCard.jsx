@@ -40,6 +40,7 @@ const CartProductCard = ({ product, getTotal, selected }) => {
         product={product}
         selected={selected}
         stateMassAddItemsObject={addCartItem}
+        stateMassRemoveItemsObject={removeCartList}
         removeCartList={removeCartList}
       />
       <ProductCartItemImg productImg={product.images[0]} />

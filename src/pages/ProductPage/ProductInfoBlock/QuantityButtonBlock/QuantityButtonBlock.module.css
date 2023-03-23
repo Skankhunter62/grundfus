@@ -1,18 +1,32 @@
-.quantityButtonBlock{
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.quantityButtonBlock {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.qntButtons{
-    width: 124px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.qntButtons {
+  width: 124px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.cartButtons{
-    width: 271px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.cartButtons {
+  width: 271px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1440px) {
+  .quantityButtonBlock {
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+  }
+  .qntButtons {
+    width: auto;
+  }
+  .cartButtons {
+    gap: 25px;
+    width: auto;
+  }
 }

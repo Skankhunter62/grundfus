@@ -1,23 +1,36 @@
-.mainBlockLayout{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.mainBlockLayout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.twoColumnLayout{
-    max-width: 1290px;
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
-    padding-top: 50px;
+.twoColumnLayout {
+  max-width: 1290px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  padding-top: 50px;
 }
 
-.mainContent{
-    width: 960px;
-    height: 100%;
+.mainContent {
+  width: 960px;
+  height: 100%;
 }
-.container{
-    width: 1290px;
-    margin: 0 auto;
+.container {
+  width: 1290px;
+  margin: 0 auto;
+}
+.testForMobile {
+}
+@media screen and (max-width: 1440px) {
+  .twoColumnLayout {
+    max-width: none;
+    width: 100%;
+    padding: 25px;
+  }
+  .container {
+    width: 100%;
+    margin: 0;
+  }
 }

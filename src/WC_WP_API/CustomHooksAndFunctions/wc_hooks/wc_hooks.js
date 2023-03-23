@@ -26,6 +26,7 @@ export const addWCReview = async (WC_Review, setReviewData) => {
     .post(wcBaseUrl + "products/reviews", WC_Review, data)
     .then((response) => {
       if (response.status === 201) {
+        console.log("review success");
         setReviewData(response.data);
       } else {
         console.log(

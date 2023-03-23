@@ -23,6 +23,11 @@
 .imgBlock {
   height: 100%;
 }
+@media screen and (max-width: 1000px) {
+  .horizontalProductCartWrapper {
+    gap: 2px;
+  }
+}
 @media screen and (max-width: 960px) {
   .horizontalProductCartWrapper {
     flex-direction: column;

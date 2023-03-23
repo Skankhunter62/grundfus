@@ -38,5 +38,6 @@
 @media screen and (max-width: 1400px) {
   .contentAsideAndSection {
     width: auto;
+    margin: 20px;
   }
 }

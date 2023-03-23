@@ -1,6 +1,12 @@
-.actionButtonsBlock{
-    width: 210px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.actionButtonsBlock {
+  width: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1440px) {
+  .actionButtonsBlock {
+    width: auto;
+    gap: 20px;
+  }
 }

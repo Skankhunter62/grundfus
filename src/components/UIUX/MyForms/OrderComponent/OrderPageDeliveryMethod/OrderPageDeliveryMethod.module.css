@@ -1,35 +1,40 @@
-.OrderPageDeliveryMethod{
-    width: 480px;
-    padding: 30px;
-    display: grid;
-    grid-column-gap: 30px;
-    grid-row-gap: 16px;
-    grid-template-columns: 1fr;
-    background-color: #ffffff;
-    justify-self: flex-end;
+.OrderPageDeliveryMethod {
+  width: auto;
+  padding: 30px;
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 16px;
+  grid-template-columns: 1fr;
+  background-color: #ffffff;
+  justify-self: flex-end;
 }
 
-.myCheckbox{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
+.myCheckbox {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
 }
-.radiaBlockSubText{
-    display: grid;
-    grid-template-columns: 1fr 11fr;
-    flex-direction: column;
-    grid-column-gap: 10px;
-    align-items: center;
+.radiaBlockSubText {
+  display: grid;
+  grid-template-columns: 1fr 11fr;
+  flex-direction: column;
+  grid-column-gap: 10px;
+  align-items: center;
 }
-.radiaBlock{
-    height: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+.radiaBlock {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
-.MyCheckboxSubText{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.MyCheckboxSubText {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .OrderPageDeliveryMethod {
+    width: auto;
+  }
 }

@@ -1,9 +1,14 @@
-.OrderPageAddingFiles{
-    width: 480px;
-    padding: 30px;
-    display: grid;
-    grid-column-gap: 30px;
-    grid-row-gap: 16px;
-    grid-template-columns: 1fr;
-    background-color: #ffffff;
+.OrderPageAddingFiles {
+  width: auto;
+  padding: 30px;
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 16px;
+  grid-template-columns: 1fr;
+  background-color: #ffffff;
+}
+@media screen and (max-width: 1200px) {
+  .OrderPageAddingFiles {
+    width: auto;
+  }
 }

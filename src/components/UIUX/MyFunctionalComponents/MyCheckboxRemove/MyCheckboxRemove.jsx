@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./MyCheckboxRemove.module.css";
 import Checkbox from "@mui/material/Checkbox";
 
@@ -6,9 +6,12 @@ const MyCheckboxRemove = ({
   product,
   selected,
   stateMassAddItemsObject,
-  stateRemoveMassWishlist,
+  stateMassRemoveItemsObject,
 }) => {
   const [localChecked, setLocalChecked] = useState(false);
+  useEffect(() => {
+    setLocalChecked(selected);
+  }, [selected]);
   return (
     <div className={classes.checkboxBlock}>
       <Checkbox
@@ -18,10 +21,10 @@ const MyCheckboxRemove = ({
           if (!localChecked) {
             stateMassAddItemsObject(product);
           } else {
-            stateRemoveMassWishlist(product);
+            stateMassRemoveItemsObject(product);
           }
         }}
-        checked={selected || localChecked}
+        checked={localChecked}
       />
     </div>
   );

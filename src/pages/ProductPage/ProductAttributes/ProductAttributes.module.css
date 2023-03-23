@@ -1,15 +1,20 @@
-.attributeBlock{
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(440px, 445px));
-    grid-column-gap: 20px;
-    grid-row-gap: 25px;
+.attributeBlock {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(440px, 445px));
+  grid-column-gap: 20px;
+  grid-row-gap: 25px;
 }
-.attributeBlockPopup{
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: none;
-    grid-column-gap: 20px;
-    grid-row-gap: 25px;
-    margin-bottom: 20px;
+.attributeBlockPopup {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: none;
+  grid-column-gap: 20px;
+  grid-row-gap: 25px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1440px) {
+  .attributeBlock {
+    display: none;
+  }
 }

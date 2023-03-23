@@ -6,7 +6,7 @@ import DefaultText from "../../../../UIUX/FontsButtons/Texts/DefaultText/Default
 const HeaderBottomRightSection = () => {
   return (
     <ul className={classes.HeaderBottomRightSection}>
-      {subMenu.map((item) => (
+      {subMenu.slice(0, -1).map((item) => (
         <li key={item.id} className={classes.HeaderBottomRightSectionLnk}>
           <DefaultText isLink={true} link={item.link}>
             {item.title}

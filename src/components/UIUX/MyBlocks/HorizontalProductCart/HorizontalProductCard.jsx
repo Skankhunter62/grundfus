@@ -15,16 +15,16 @@ const HorizontalProductCard = ({ product, isCatalog, selected = false }) => {
           product={product}
           selected={selected}
           stateMassAddItemsObject={addMassWishlist}
-          stateRemoveMassWishlist={removeMassWishlist}
+          stateMassRemoveItemsObject={removeMassWishlist}
         />
       ) : (
         ""
       )}
       <HorizontalProductCardImgBlock product={product} />
       <HorizontalProductCardInfoBlock product={product} />
-      {!isCatalog ? (
+      {/* {!isCatalog ? (
         <HorizontalProductCardCloseBlock product={product} />
-      ) : null}
+      ) : null} */}
     </div>
   );
 };

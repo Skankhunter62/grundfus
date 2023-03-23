@@ -1,13 +1,19 @@
-.myOrderFormLayout{
-    width: 480px;
-    padding: 30px;
-    display: grid;
-    grid-column-gap: 30px;
-    grid-row-gap: 16px;
-    grid-template-columns: repeat(auto-fit, minmax(195px, 195px));
-    background-color: #ffffff;
+.myOrderFormLayout {
+  width: auto;
+  padding: 30px;
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(195px, 195px));
+  background-color: #ffffff;
 }
-.myOrderFormLayoutTitle{
-    grid-column: 1/3;
-    justify-content: flex-start;
+.myOrderFormLayoutTitle {
+  grid-column: 1/3;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 1400px) {
+  .myOrderFormLayout {
+    display: flex;
+    flex-direction: column;
+  }
 }

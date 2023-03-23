@@ -1,6 +1,11 @@
-.productTabsBlock{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.productTabsBlock {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media screen and (max-width: 1440px) {
+  .productTabsBlock {
+    display: none;
+  }
 }

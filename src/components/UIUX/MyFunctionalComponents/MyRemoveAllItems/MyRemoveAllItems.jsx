@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./MyRemoveAllItems.module.css";
 import Checkbox from "@mui/material/Checkbox";
 
@@ -14,6 +14,10 @@ const MyRemoveAllItems = ({
   stateMassAddItemsObject,
   stateMassRemoveAllObject,
 }) => {
+  const [checked, setChecked] = useState(false);
+  const changeChecked = () => {
+    setChecked(!checked);
+  };
   const deleteSelectedElements = (productArray) => {
     productArray.map((singleProduct) => {
       stateRemoveObject(singleProduct);
@@ -21,24 +25,43 @@ const MyRemoveAllItems = ({
     });
     localStorage.removeItem(stateName);
   };
-  console.log("stateMassObject.length: ", stateMassObject.length);
-  console.log("stateObject.length: ", stateObject.length);
+
+  useEffect(() => {
+    if (stateMassObject.length === stateObject.length) {
+      if (!checked) {
+        checkSelected();
+        changeChecked();
+      }
+    }
+    if (stateMassObject.length === 0) {
+      if (checked) {
+        checkSelected();
+        setChecked(false);
+      }
+    }
+  }, [stateMassObject]);
+
+  // console.log("stateMassObject.length", stateMassObject);
+  // console.log("stateObject.length", stateObject);
   return (
     <div className={classes.removeAll}>
       <div className={classes.leftPart}>
         <div className={classes.checkboxBlock}>
           <Checkbox
+            checked={checked}
             {...label}
             onClick={() => {
+              changeChecked();
               checkSelected();
-              if (stateMassObject.length < stateObject.length) {
-                stateMassRemoveAllObject();
-
-                stateMassAddItemsObject(stateObject);
-              } else if (stateMassObject.length === stateObject.length) {
-                stateMassRemoveAllObject();
+              if (stateMassObject.length !== 0) {
+                if (stateMassObject.length === stateObject.length) {
+                  stateMassRemoveAllObject();
+                } else {
+                  stateMassRemoveAllObject();
+                  stateMassAddItemsObject(stateObject);
+                }
               } else {
-                stateMassRemoveAllObject();
+                stateMassAddItemsObject(stateObject);
               }
             }}
           />

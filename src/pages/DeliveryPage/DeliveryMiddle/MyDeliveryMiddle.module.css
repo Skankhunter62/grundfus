@@ -1,7 +1,14 @@
-.middle_post_layout{
-    margin-top: 45px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    grid-template-rows: repeat(2, 250px);
-    grid-gap: 30px;
+.middle_post_layout {
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-rows: repeat(2, 250px);
+  grid-gap: 30px;
+}
+@media screen and (max-width: 1440px) {
+  .middle_post_layout {
+    padding: 20px;
+    grid-template-columns: none;
+    grid-template-rows: none;
+  }
 }

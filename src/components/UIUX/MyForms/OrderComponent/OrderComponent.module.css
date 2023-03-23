@@ -1,22 +1,28 @@
-.OrderComponentGrid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 35px;
+.OrderComponentGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 35px;
 }
 
-.OrderComponentGridLoading{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 35px;
-    opacity: 0.4;
+.OrderComponentGridLoading {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 35px;
+  opacity: 0.4;
 }
 
-.OrderComponentBlock{
-    position: relative;
+.OrderComponentBlock {
+  position: relative;
 }
 
-.OrderComponentLoader{
-    position: absolute;
-    right: 40%;
-    top: 40%;
+.OrderComponentLoader {
+  position: absolute;
+  right: 40%;
+  top: 40%;
+}
+@media screen and (max-width: 1400px) {
+  .OrderComponentGrid {
+    display: flex;
+    flex-direction: column;
+  }
 }

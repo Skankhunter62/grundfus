@@ -10,8 +10,8 @@
 }
 .contentAsideAndSection {
   display: grid;
-  /* width: 1290px; */
-  width: auto;
+  width: 1290px;
+  /* width: auto; */
   margin: 0 auto;
   padding: 40px 0 0 0;
 }
@@ -33,5 +33,11 @@
 @media screen and (max-width: 910px) {
   .responsiveWrapper {
     display: none;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .contentAsideAndSection {
+    width: auto;
+    margin: 0 20px;
   }
 }
