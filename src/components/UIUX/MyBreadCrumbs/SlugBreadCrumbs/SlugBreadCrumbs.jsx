@@ -10,7 +10,6 @@ const SlugBreadCrumbs = ({ slug }) => {
     { slug: "", name: "" },
   ]);
   useEffect(() => {
-    console.log("breadcrumb");
     if (singleCategory[0] !== undefined) {
       setCurrentCategory(...singleCategory);
     }

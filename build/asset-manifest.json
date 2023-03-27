@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c531bf5f.css",
-    "main.js": "/static/js/main.024a2151.js",
+    "main.css": "/static/css/main.dcb98875.css",
+    "main.js": "/static/js/main.b620b3ef.js",
     "static/media/Calculator.jpg": "/static/media/Calculator.3b16c9baae7134d94319.jpg",
     "static/media/dostavka-icon-spisok.svg": "/static/media/dostavka-icon-spisok.d5f6d48a8fe3c8a995095cf6fd15186a.svg",
     "static/media/main-header__grundfos-logo.svg": "/static/media/main-header__grundfos-logo.37ce4aefbd12e6f0584f532eaff212fe.svg",
@@ -30,6 +30,7 @@
     "static/media/compare-icon-default.svg": "/static/media/compare-icon-default.dc15648d18fc28b6b11525bb799f91a9.svg",
     "static/media/right_arrow.svg": "/static/media/right_arrow.d0e5b1441b3bc517a641954f5117bcc9.svg",
     "static/media/wishlist-icon-active.svg": "/static/media/wishlist-icon-active.879d26ae40557128fd569aa043e4cd99.svg",
+    "index.html": "/index.html",
     "static/media/arrow_slider_next.svg": "/static/media/arrow_slider_next.1f609ec9d1d77a3c12f9.svg",
     "static/media/arrow_slider_prev.svg": "/static/media/arrow_slider_prev.a61df94df2b699abbe2c.svg",
     "static/media/arrow_slider_next_white.svg": "/static/media/arrow_slider_next_white.ff2d3b00a78c839fec57.svg",
@@ -38,18 +39,17 @@
     "static/media/slider_about_arrow_next.svg": "/static/media/slider_about_arrow_next.f2c3c8fba6378a946fc5b659690b940c.svg",
     "static/media/layers_diactive.svg": "/static/media/layers_diactive.55ac979c9a80afed6509fc4c9167a246.svg",
     "static/media/layers_active.svg": "/static/media/layers_active.658c1882cf77e8928f4430e5806e78e7.svg",
-    "index.html": "/index.html",
     "static/media/row-layout.svg": "/static/media/row-layout.c626ec30ce84d2de53a1b3f33558fc2f.svg",
     "static/media/active_grid.svg": "/static/media/active_grid.35e623700ba5b95665d33b15aff3375f.svg",
     "static/media/grid-layout.svg": "/static/media/grid-layout.71a2664f40b457a9ca420f1e82b6e92a.svg",
     "static/media/active_list.svg": "/static/media/active_list.35fbc800a875a72dd67fedbe5ca8567e.svg",
     "static/media/filter_arrow.svg": "/static/media/filter_arrow.976e89ba6b9c8a278351e9b303231998.svg",
     "static/media/close_big.svg": "/static/media/close_big.765d612ac5c7963cd78156311a3a2e5d.svg",
-    "main.c531bf5f.css.map": "/static/css/main.c531bf5f.css.map",
-    "main.024a2151.js.map": "/static/js/main.024a2151.js.map"
+    "main.dcb98875.css.map": "/static/css/main.dcb98875.css.map",
+    "main.b620b3ef.js.map": "/static/js/main.b620b3ef.js.map"
   },
   "entrypoints": [
-    "static/css/main.c531bf5f.css",
-    "static/js/main.024a2151.js"
+    "static/css/main.dcb98875.css",
+    "static/js/main.b620b3ef.js"
   ]
 }

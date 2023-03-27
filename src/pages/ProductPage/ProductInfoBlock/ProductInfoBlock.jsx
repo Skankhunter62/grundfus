@@ -34,7 +34,9 @@ const ProductInfoBlock = ({
         counter={counter}
         isExistsInCart={isExistsInCart}
       />
-      <RelatedProducts product={singleProduct} related={related} />
+      <div className={classes.relatedDesktop}>
+        <RelatedProducts product={singleProduct} related={related} />
+      </div>
     </div>
   );
 };

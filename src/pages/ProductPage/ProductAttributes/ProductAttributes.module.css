@@ -13,8 +13,8 @@
   grid-row-gap: 25px;
   margin-bottom: 20px;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 576px) {
   .attributeBlock {
-    display: none;
+    grid-template-columns: none;
   }
 }

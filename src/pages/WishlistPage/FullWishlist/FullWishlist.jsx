@@ -7,7 +7,6 @@ import MyRemoveAllItems from "../../../components/UIUX/MyFunctionalComponents/My
 const FullWishlist = () => {
   const [selected, setSelected] = useState(false);
   const checkSelected = () => {
-    console.log("selected!", selected);
     setSelected(!selected);
   };
 

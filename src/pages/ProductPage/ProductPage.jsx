@@ -9,6 +9,7 @@ import ProductTabs from "./ProductTabs/ProductTabs";
 import { useTypedSelector } from "../../store/hooks/useTypedSelector";
 import MyBreadCrumbs from "../../components/UIUX/MyBreadCrumbs/MyBreadCrumbs";
 import { Helmet } from "react-helmet";
+import RelatedProducts from "./ProductInfoBlock/RelatedProducts/RelatedProducts";
 
 const ProductPage = (props) => {
   /*get product id by url*/
@@ -94,7 +95,6 @@ const ProductPage = (props) => {
   /*change price if we want more one product*/
   let totalPrice = productPrice * quantity;
   let totalSalePrice = productSalePrice.sale_price * quantity;
-  console.log("totalPrice: ", totalPrice);
   return (
     <>
       <Helmet>
@@ -167,6 +167,9 @@ const ProductPage = (props) => {
           counter={counter}
           related={related}
         />
+      </div>
+      <div className={classes.relatedMobile}>
+        <RelatedProducts product={singleProduct} related={related} />
       </div>
       <ProductTabs product={singleProduct} />
       <div>

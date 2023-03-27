@@ -37,4 +37,12 @@
     width: 100%;
     margin-top: 10px;
   }
+  .cartButtons button {
+    text-align: center;
+    width: 100%;
+  }
+  .cartButtons a {
+    text-align: center;
+    width: 100%;
+  }
 }

@@ -44,6 +44,10 @@
   align-items: center;
   justify-content: flex-end;
 }
+.relatedMobile {
+  max-width: 554px;
+  display: none;
+}
 
 @media screen and (max-width: 993px) {
   .productMainWrapper {
@@ -52,6 +56,12 @@
     align-items: center;
   }
 }
+@media screen and (max-width: 1440px) {
+  .relatedMobile {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .breadCrumbs {
     display: none;

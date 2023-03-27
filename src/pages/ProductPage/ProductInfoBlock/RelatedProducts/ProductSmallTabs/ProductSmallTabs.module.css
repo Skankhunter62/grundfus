@@ -7,8 +7,13 @@
 }
 @media screen and (max-width: 1440px) {
   .productSmallTabs {
-    display: none;
     width: auto;
     justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 576px) {
+  .productSmallTabs {
+    flex-direction: column;
+    align-items: start;
   }
 }

@@ -9,4 +9,7 @@
     flex-direction: column;
     align-items: start;
   }
+  .relatedDesktop {
+    display: none;
+  }
 }
