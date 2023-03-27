@@ -10,3 +10,9 @@
     gap: 20px;
   }
 }
+@media screen and (max-width: 350px) {
+  .actionButtonsBlock {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

@@ -30,3 +30,11 @@
     width: auto;
   }
 }
+@media screen and (max-width: 576px) {
+  .cartButtons {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+}

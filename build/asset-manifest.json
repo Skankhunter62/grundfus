@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.bd99a191.css",
-    "main.js": "/static/js/main.700a7405.js",
+    "main.css": "/static/css/main.c531bf5f.css",
+    "main.js": "/static/js/main.024a2151.js",
     "static/media/Calculator.jpg": "/static/media/Calculator.3b16c9baae7134d94319.jpg",
     "static/media/dostavka-icon-spisok.svg": "/static/media/dostavka-icon-spisok.d5f6d48a8fe3c8a995095cf6fd15186a.svg",
     "static/media/main-header__grundfos-logo.svg": "/static/media/main-header__grundfos-logo.37ce4aefbd12e6f0584f532eaff212fe.svg",
@@ -45,11 +45,11 @@
     "static/media/active_list.svg": "/static/media/active_list.35fbc800a875a72dd67fedbe5ca8567e.svg",
     "static/media/filter_arrow.svg": "/static/media/filter_arrow.976e89ba6b9c8a278351e9b303231998.svg",
     "static/media/close_big.svg": "/static/media/close_big.765d612ac5c7963cd78156311a3a2e5d.svg",
-    "main.bd99a191.css.map": "/static/css/main.bd99a191.css.map",
-    "main.700a7405.js.map": "/static/js/main.700a7405.js.map"
+    "main.c531bf5f.css.map": "/static/css/main.c531bf5f.css.map",
+    "main.024a2151.js.map": "/static/js/main.024a2151.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd99a191.css",
-    "static/js/main.700a7405.js"
+    "static/css/main.c531bf5f.css",
+    "static/js/main.024a2151.js"
   ]
 }

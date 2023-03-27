@@ -47,7 +47,7 @@ const ProductPage = (props) => {
       const { product } = location.state;
       setSingleProduct(product);
       setRelatedID(product.related_ids);
-      setProductPrice(product.price);
+      setProductPrice(product.regular_price);
       setProductSalePrice(product);
       setIsExistsInCart(cart.some((p) => p.id === product.id));
       setLoading(false);
@@ -59,7 +59,7 @@ const ProductPage = (props) => {
             setSingleProduct(response.data[0]);
             setProductSalePrice(response.data[0]);
             setRelatedID(response.data[0].related_ids);
-            setProductPrice(response.data[0].price);
+            setProductPrice(response.data[0].regular_price);
             setLoading(false);
           }
         })
@@ -94,7 +94,7 @@ const ProductPage = (props) => {
   /*change price if we want more one product*/
   let totalPrice = productPrice * quantity;
   let totalSalePrice = productSalePrice.sale_price * quantity;
-
+  console.log("totalPrice: ", totalPrice);
   return (
     <>
       <Helmet>
