@@ -20,12 +20,20 @@ const DescriptionBlock = ({ product_description }) => {
         <DescriptionTab description={product_description} />
       </div>
       <div className={classes.readMore}>
-        <ProductPageTabsAndUpSallesButton
-          isTabs={true}
-          change={getShortDescription}
+        <div
+          className={
+            product_description.length > 993
+              ? classes.showMoreVisible
+              : classes.showMoreDisabled
+          }
         >
-          {buttonDescription}
-        </ProductPageTabsAndUpSallesButton>
+          <ProductPageTabsAndUpSallesButton
+            isTabs={true}
+            change={getShortDescription}
+          >
+            {buttonDescription}
+          </ProductPageTabsAndUpSallesButton>
+        </div>
       </div>
     </div>
   );

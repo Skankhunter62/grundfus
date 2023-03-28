@@ -27,3 +27,14 @@
 .linkFullWidth {
   width: 100%;
 }
+.gridProductCardMobileNoPopup {
+  display: none;
+}
+@media screen and (max-width: 1440px) {
+  .gridProductCardMobileNoPopup {
+    display: block;
+  }
+  .gridProductCardMobileHasPopup {
+    display: none;
+  }
+}

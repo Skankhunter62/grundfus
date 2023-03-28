@@ -1,12 +1,20 @@
-.myRegularSliderBlock{
-    margin: 100px 15px 0px 15px;
+.myRegularSliderBlock {
+  max-width: 1290px;
+
+  margin: 50px auto;
 }
-.MyRegularSliderBlockLoader{
-    height: 440px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #003767;
-    opacity: 0.6;
+.MyRegularSliderBlockLoader {
+  height: 440px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #003767;
+  opacity: 0.6;
+}
+@media screen and (max-width: 1440px) {
+  .myRegularSliderBlock {
+    width: auto;
+    margin: 50px 10px;
+  }
 }

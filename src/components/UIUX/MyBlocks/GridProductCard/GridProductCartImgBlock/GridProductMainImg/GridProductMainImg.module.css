@@ -3,3 +3,16 @@
   height: 100%;
   /* object-fit: cover; */
 }
+.gridProductCartImgItemMobile {
+  width: auto;
+  height: 100%;
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .gridProductCartImgItem {
+    display: none;
+  }
+  .gridProductCartImgItemMobile {
+    display: block;
+  }
+}

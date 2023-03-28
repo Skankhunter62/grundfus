@@ -1,0 +1,23 @@
+.reviewButton {
+  user-select: none;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 14px;
+  background-color: var(--main-background-color);
+  max-width: 150px;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+.reviewButton:hover {
+  border-radius: 2px;
+  transition: background-color 0.25s ease;
+  background-color: #d72500;
+}
+.reviewSuccess {
+  display: none;
+}
+.reviewSuccessActive {
+  display: block;
+}

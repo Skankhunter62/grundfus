@@ -33,7 +33,16 @@ const GridProductCard = ({
             slider ? classes.gridProductCart : classes.gridProductCartDefault
           }`}
         >
-          <div onClick={prevent}>
+          <div
+            onClick={prevent}
+            className={classes.gridProductCardMobileHasPopup}
+          >
+            <GridProductCardImgBlock
+              product={product}
+              changePopupState={changePopupState}
+            />
+          </div>
+          <div className={classes.gridProductCardMobileNoPopup}>
             <GridProductCardImgBlock
               product={product}
               changePopupState={changePopupState}

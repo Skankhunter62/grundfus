@@ -48,6 +48,12 @@
   max-width: 554px;
   display: none;
 }
+.showMoreVisible {
+  display: block;
+}
+.showMoreDisabled {
+  display: none;
+}
 
 @media screen and (max-width: 993px) {
   .productMainWrapper {

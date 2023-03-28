@@ -15,9 +15,9 @@ const ProductAttributes = ({ product, isPopup }) => {
       setAttributePages(Math.round(arrayLen / defaultCount));
     }
   }, [product]);
-
+  console.log("ALERT", product.attributes);
   return (
-    <div>
+    <div className={product.attributes.length === 0 ? classes.disabled : ""}>
       {!isPopup ? (
         <PostsPagesTitle>
           Технические характеристики {product.name}

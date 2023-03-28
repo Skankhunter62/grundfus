@@ -36,6 +36,7 @@ const FullWishlist = () => {
           product={product}
           selected={selected}
           key={product.id}
+          type={"wishlist"}
         />
       ))}
     </>

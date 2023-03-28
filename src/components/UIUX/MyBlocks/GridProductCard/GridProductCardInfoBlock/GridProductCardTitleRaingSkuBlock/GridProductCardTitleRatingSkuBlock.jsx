@@ -6,13 +6,13 @@ import MyCardSkuText from "../../../../FontsButtons/Texts/Product/ProductSkuText
 
 const GridProductCardTitleRatingSkuBlock = ({ product }) => {
   const prevent = (e) => {
-    e.preventDefault();
+    console.log("e", e);
   };
   return (
     <div className={classes.gridProductCardTitleRatingSkuBlock}>
       <ProductCardTitle product={product} />
       <div onClick={prevent} className={classes.test}>
-        <MaterialUiRating product={product} />
+        <MaterialUiRating product={product} fromCatalog={true} />
       </div>
       <MyCardSkuText sku={product.sku} />
     </div>

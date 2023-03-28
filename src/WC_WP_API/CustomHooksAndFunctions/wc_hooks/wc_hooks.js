@@ -26,8 +26,13 @@ export const addWCReview = async (WC_Review, setReviewData) => {
     .post(wcBaseUrl + "products/reviews", WC_Review, data)
     .then((response) => {
       if (response.status === 201) {
-        console.log("review success");
-        setReviewData(response.data);
+        console.log(
+          "review success: ",
+          wcBaseUrl + "products/reviews",
+          WC_Review,
+          data
+        );
+        // setReviewData(response.data);
       } else {
         console.log(
           "Problems with server connection, when try send product review"
@@ -40,7 +45,7 @@ export const useWCProductReview = (productId, setReviewData) => {
   useEffect(() => {
     reviewsApi.get(`products/${productId}/reviews`).then((response) => {
       if (response.status === 200) {
-        setReviewData(response.data);
+        // setReviewData(response.data);
       } else {
         console.log(
           "Problems with server connection, when try get product review"
@@ -48,6 +53,29 @@ export const useWCProductReview = (productId, setReviewData) => {
       }
     });
   }, [productId]);
+};
+
+/*get reviews for a single product*/
+export const useWCSingleProductReview = (productId, setReviewData) => {
+  useEffect(() => {
+    reviewsApi.get(`products/${productId}/reviews`).then((response) => {
+      if (response.status === 200) {
+        setReviewData(
+          response.data.filter((review) => {
+            if (review.review !== "empty") {
+              if (review.rating !== 0) {
+                return review;
+              }
+            }
+          })
+        );
+      } else {
+        console.log(
+          "Problems with server connection, when try get product review"
+        );
+      }
+    });
+  }, []);
 };
 
 /*------------------Product Categories Block Hooks --------------------------------*/
