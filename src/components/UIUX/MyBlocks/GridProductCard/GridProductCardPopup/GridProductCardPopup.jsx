@@ -9,7 +9,10 @@ import { Link } from "react-router-dom";
 const GridProductCardPopup = ({ product, changePopupState }) => {
   console.log(product);
   const description = parse(product.description);
-  const parsed = description[0].props.children;
+  let parsed = "";
+  if (description.length !== 0) {
+    parsed = description[0].props.children;
+  }
   const getParsed = () => {
     if (parsed.length > 700) {
       return parsed.substring(0, 700) + "...";

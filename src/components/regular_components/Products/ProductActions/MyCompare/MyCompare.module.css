@@ -27,7 +27,6 @@
 }
 .compareBlockPosition:hover svg path {
   fill: #ff4822;
-  transition: 0.25s ease;
 }
 .actionButton {
   width: 25px;

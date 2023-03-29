@@ -1,27 +1,30 @@
-.MyFilterAttributeTitleBlock{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    cursor: pointer;
+.MyFilterAttributeTitleBlock {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  cursor: pointer;
 }
 .MyFilterAttributeTitleAttribute,
-.MyFilterAttributeTitle{
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 150%;
-    color: #003767;
+.MyFilterAttributeTitle {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #003767;
+  margin-right: 15px;
 }
-.MyFilterAttributeTitleAttribute{ margin-bottom: 15px;}
+.MyFilterAttributeTitleAttribute {
+  margin-bottom: 15px;
+}
 .MyFilterAttributeTitleArrow,
-.MyFilterAttributeTitleArrowVisible{
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    top: 5px;
-    right: 0;
+.MyFilterAttributeTitleArrowVisible {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 5px;
+  right: 0;
 }
-.MyFilterAttributeTitleArrowVisible{
-    transform: rotate(180deg);
+.MyFilterAttributeTitleArrowVisible {
+  transform: rotate(180deg);
 }

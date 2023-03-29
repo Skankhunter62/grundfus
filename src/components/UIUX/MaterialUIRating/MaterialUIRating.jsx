@@ -27,7 +27,8 @@ const MaterialUiRating = ({ product, fromCatalog }) => {
         }}
         value={Number(product.average_rating) || 0}
         precision={1}
-        readOnly={fromCatalog ? true : false}
+        // readOnly={fromCatalog ? true : false}
+        readOnly={true}
       />
     </Stack>
   );

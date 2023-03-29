@@ -16,7 +16,6 @@ const ReviewsForm = (product, UpdateReviews) => {
       setAlertVisible(false);
     }, 3000);
     event.preventDefault();
-    console.log("sending new review");
     const data = {
       product_id: product.product.product.id,
       review: newReview,
@@ -24,7 +23,6 @@ const ReviewsForm = (product, UpdateReviews) => {
       reviewer_email: userEmail || `anonymous${Math.random()}@anonymous.ru`,
       rating: reviewRating,
     };
-    console.log("product, ", product);
     addWCReview(data);
 
     setNewReview("");
@@ -43,6 +41,7 @@ const ReviewsForm = (product, UpdateReviews) => {
         <Rating
           name="read-only"
           precision={1}
+          value={reviewRating}
           onChange={(event) => {
             setReviewRating(event.target.value);
           }}

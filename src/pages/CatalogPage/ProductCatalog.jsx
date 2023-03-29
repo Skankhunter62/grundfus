@@ -61,7 +61,7 @@ const ProductCatalog = () => {
   }, [singleCategory]);
 
   useEffect(() => {
-    console.log("params", params);
+    // console.log("params", params);
     // setLoading(true);
   }, [params]);
 

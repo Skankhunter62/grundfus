@@ -13,7 +13,6 @@ const MyProductsCompareAttributes = ({ sliderCounter, subarray }) => {
     attrIndex = sliderCounter * 2 - 1;
   }
   let newArray = compareAttributes[attrIndex];
-  console.log("newArray: ", newArray);
   return (
     <div className={classes.attributesBlock}>
       {newArray?.map((attr) => (

@@ -17,16 +17,13 @@ const CompareLayout = () => {
   const { compareAttributesListAddItem } = useActions();
 
   function sliceIntoChunks(arr, chunkSize) {
-    console.log("arr", arr);
     const res = [];
     for (let i = 0; i < arr.length; i += chunkSize) {
       const chunk = arr.slice(i, i + chunkSize);
       res.push(chunk);
     }
     if (res[res.length - 1].length === 1) {
-      console.log("res", res);
       res[res.length - 1].unshift(arr[arr.length - 2]);
-      // res[res.length - 1].push(arr[0]);
     }
     return res;
   }
@@ -76,7 +73,6 @@ const CompareLayout = () => {
       // subarray[subarray.length - 1].unshift(preLast[0][1]);
     }
   }, [subarray]);
-  console.log("sliderCounter: ", sliderCounter);
   return (
     <div>
       <div className={classes.actionsLayoutBlock}>
