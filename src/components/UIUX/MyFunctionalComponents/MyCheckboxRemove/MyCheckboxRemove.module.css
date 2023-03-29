@@ -5,6 +5,11 @@
   justify-content: center;
   min-width: 70px;
 }
+@media screen and (max-width: 1200px) {
+  .checkboxBlock {
+    min-width: 0;
+  }
+}
 @media screen and (max-width: 1000px) {
   .checkboxBlock {
     min-width: 0;

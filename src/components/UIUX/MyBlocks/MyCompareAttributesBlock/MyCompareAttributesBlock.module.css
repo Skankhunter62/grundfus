@@ -1,31 +1,50 @@
-.myCompareAttributesBlock{
-    background-color: #ffffff;
-    margin-top: 85px;
+.myCompareAttributesBlock {
+  background-color: #ffffff;
+  margin-top: 85px;
 }
-.MyCompareAttributesBlockTopSection{
-    max-width: 1290px;
-    margin: 0 auto;
-    height: 204px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 90px;
+.MyCompareAttributesBlockTopSection {
+  max-width: 1290px;
+  margin: 0 auto;
+  height: 204px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 90px;
 }
-.compareBlockTitle{
-    width: 200px;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 150%;
-    letter-spacing: 0.02em;
-    color: #ff4822;
+.compareBlockTitle {
+  width: 200px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #ff4822;
 }
-.sliderBlock{
-    width: 845px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.sliderBlock {
+  width: 845px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.attributesBlock{
-    display: flex;
+.attributesBlock {
+  display: flex;
+  flex-direction: column;
+}
+.arrow_box {
+  width: 32px;
+  height: 32px;
+  background-color: #000;
+}
+@media screen and (max-width: 1440px) {
+  .MyCompareAttributesBlockTopSection {
+    gap: 10px;
     flex-direction: column;
+    height: auto;
+    padding: 15px 20px;
+  }
+  .sliderBlock {
+    width: 100%;
+  }
+  .compareBlockTitle {
+    width: auto;
+  }
 }

@@ -16,6 +16,7 @@ import { useLocation } from "react-router-dom";
 const ProductCatalog = () => {
   const locationState = useLocation();
   const params = useParams();
+
   /*get redux store functions*/
   const { addProducts, addProductsAttributes, removeProducts } = useActions();
   /*get from redux store lists*/
@@ -60,7 +61,8 @@ const ProductCatalog = () => {
   }, [singleCategory]);
 
   useEffect(() => {
-    setLoading(true);
+    console.log("params", params);
+    // setLoading(true);
   }, [params]);
 
   useEffect(() => {

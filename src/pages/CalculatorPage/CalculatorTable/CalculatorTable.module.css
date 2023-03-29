@@ -36,3 +36,15 @@
 .Table tr:hover {
   background-color: #ddd;
 }
+@media screen and (max-width: 870px) {
+  .Wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .TableWrapper {
+    width: auto;
+  }
+}

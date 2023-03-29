@@ -40,4 +40,9 @@
     width: auto;
     margin: 20px;
   }
+  .popularGood {
+    max-width: none;
+    width: 100%;
+    padding: 10px;
+  }
 }

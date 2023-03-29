@@ -41,8 +41,8 @@ const MyRemoveAllItems = ({
     }
   }, [stateMassObject]);
 
-  console.log("stateMassObject.length", stateMassObject);
-  console.log("stateObject.length", stateObject);
+  // console.log("stateMassObject.length", stateMassObject);
+  // console.log("stateObject.length", stateObject);
   return (
     <div className={classes.removeAll}>
       <div className={classes.leftPart}>

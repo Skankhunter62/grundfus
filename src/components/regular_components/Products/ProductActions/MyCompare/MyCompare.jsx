@@ -36,11 +36,6 @@ const MyCompare = ({
             />
           </svg>
 
-          {/* <img
-            src={compare_icon}
-            alt="Сравнение"
-            className={classes.actionButton}
-          /> */}
           <span className={classes.countSpan}>{compare.length}</span>
         </Link>
       ) : (
@@ -52,10 +47,6 @@ const MyCompare = ({
               : comparelistAddItem(product);
           }}
         >
-          {/* <img
-            src={isExistsInComparelist ? active_compare : compare_icon}
-            alt="Сравнение"
-          /> */}
           <div className={classes.circleIcon}>
             <svg
               width="19"

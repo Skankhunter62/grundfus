@@ -6,9 +6,17 @@ import DefaultText from "../../../FontsButtons/Texts/DefaultText/DefaultText";
 
 const MyProductsCompareAttributes = ({ sliderCounter, subarray }) => {
   const { compareAttributes } = useTypedSelector((state) => state);
+  let attrIndex = 0;
+  if (sliderCounter === 0) {
+    attrIndex = 0;
+  } else {
+    attrIndex = sliderCounter * 2 - 1;
+  }
+  let newArray = compareAttributes[attrIndex];
+  console.log("newArray: ", newArray);
   return (
     <div className={classes.attributesBlock}>
-      {compareAttributes?.map((attr) => (
+      {newArray?.map((attr) => (
         <div
           key={Math.random()}
           className={classes.myProductsCompareAttributesBlock}

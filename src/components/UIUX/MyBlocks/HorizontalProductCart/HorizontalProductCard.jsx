@@ -25,10 +25,10 @@ const HorizontalProductCard = ({
           product={product}
           selected={selected}
           stateMassAddItemsObject={
-            (type = "wishlist" ? addMassWishlist : addMassCompare)
+            type == "wishlist" ? addMassWishlist : addMassCompare
           }
           stateMassRemoveItemsObject={
-            (type = "wishlist" ? removeMassWishlist : removeMassCompare)
+            type == "wishlist" ? removeMassWishlist : removeMassCompare
           }
         />
       ) : (

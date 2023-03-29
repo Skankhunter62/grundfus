@@ -30,3 +30,8 @@ input[type="number"] {
   position: relative;
   width: 300px;
 }
+@media screen and (max-width: 576px) {
+  .inputWrapper {
+    width: auto;
+  }
+}

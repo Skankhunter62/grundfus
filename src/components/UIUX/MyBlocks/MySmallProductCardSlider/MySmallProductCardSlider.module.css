@@ -1,18 +1,23 @@
-.mySmallProductCardSlider{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    width: 300px;
-    margin: 0 auto;
-    text-align: center;
+.mySmallProductCardSlider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
 }
-.mySmallProductCardSliderImg{
-    width: 85px;
-    height: 85px;
+.mySmallProductCardSliderImg {
+  width: 85px;
+  height: 85px;
 }
-.img{
+.img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 1440px) {
+  .mySmallProductCardSlider {
     width: auto;
-    height: 100%;
-    object-fit: cover;
+  }
 }

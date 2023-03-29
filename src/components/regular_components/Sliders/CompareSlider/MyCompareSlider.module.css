@@ -1,8 +1,23 @@
-.myRegularSliderBlock{
-    width: 90%;
+.myRegularSliderBlock {
+  width: 90%;
 }
-.sliderBlocks{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.sliderBlocks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.next_box {
+  width: 32px;
+  height: 32px;
+  background-color: #000;
+}
+.prev_box {
+  width: 32px;
+  height: 32px;
+  background-color: #000;
+}
+@media screen and (max-width: 1440px) {
+  .myRegularSliderBlock {
+    width: 100%;
+  }
 }

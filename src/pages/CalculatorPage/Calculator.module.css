@@ -65,3 +65,52 @@
   transition: all 0.25s ease;
   background-color: #a7240a;
 }
+@media screen and (max-width: 1440px) {
+  .main_container {
+    max-width: none;
+    width: auto;
+    margin: 0 25px;
+  }
+  .CalculatorImage {
+    width: 100%;
+    max-width: 330px;
+    height: auto;
+    right: 25px;
+  }
+}
+@media screen and (max-width: 1170px) {
+  .CalculatorImage {
+    max-width: 250px;
+    max-height: 480px;
+    top: 70px;
+  }
+}
+@media screen and (max-width: 1170px) {
+  .CalculatorImage {
+    display: none;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .CalculatorPageWrapper {
+    padding: 35px;
+  }
+}
+@media screen and (max-width: 870px) {
+  .CalculatorTable {
+    padding: 0;
+  }
+  .CalculatorPageWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .CalculatorField {
+    margin: 0;
+  }
+  .CalculatorButton {
+    width: auto;
+    padding: 10px 25px;
+  }
+}

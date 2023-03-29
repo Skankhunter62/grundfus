@@ -27,3 +27,28 @@
 .CalculatorPressureLabelTip {
   margin-top: 22px;
 }
+@media screen and (max-width: 1250px) {
+  .CalculatorBottomSectionWrapper {
+    column-gap: 50px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .CalculatorBottomSectionWrapper {
+    column-gap: 50px;
+    grid-template-columns: none;
+  }
+  .CalculatorRadioWrapper {
+    width: auto;
+  }
+  .CalculatorPressureWrapper {
+    width: auto;
+  }
+}
+@media screen and (max-width: 870px) {
+  .CalculatorBottomSectionWrapper {
+    gap: 15px;
+  }
+  .CalculatorRadioWrapper {
+    margin-top: 15px;
+  }
+}
