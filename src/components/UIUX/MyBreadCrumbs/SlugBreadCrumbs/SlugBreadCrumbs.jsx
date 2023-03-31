@@ -21,15 +21,15 @@ const SlugBreadCrumbs = ({ slug }) => {
   return (
     <div className={classes.breadCrumbsLayout}>
       <NavLink to="/">Главная</NavLink>
-      <div>></div>
+      <div>{">"}</div>
       <NavLink to="/catalog">Каталог</NavLink>
-      <div>></div>
+      <div>{">"}</div>
       <NavLink to={`/catalog/${currentCategory.slug || "cirkulyacionnye"}`}>
         {currentCategory.name}
       </NavLink>
       {slug ? (
         <>
-          <div>></div>
+          <div>{">"}</div>
           <NavLink to={`/catalog/${slug}`}>{singleProduct.name}</NavLink>
         </>
       ) : (

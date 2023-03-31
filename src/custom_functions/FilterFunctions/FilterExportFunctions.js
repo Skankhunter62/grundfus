@@ -5,7 +5,7 @@ export const getProductsByCalcOption = (
   productsList,
   temporaryArrayOfProducts,
   setTemporaryArrayOfProducts,
-  changeNotFound
+  changeEmptyFlag
 ) => {
   if (productsList.length !== 0 && calcAttributes.length !== 0) {
     let middleArrayIfTemporaryEmpty = [];

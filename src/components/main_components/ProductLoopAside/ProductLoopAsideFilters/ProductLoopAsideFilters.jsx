@@ -4,12 +4,12 @@ import { useTypedSelector } from "../../../../store/hooks/useTypedSelector";
 import { useActions } from "../../../../store/hooks/useActions";
 import { useLocation } from "react-router-dom";
 import {
-  getProductsByCalcOption,
   getAttributesToDefaultList,
   getProductsByFilterOption,
 } from "../../../../custom_functions/FilterFunctions/FilterExportFunctions";
 import { attributesDefaultList } from "../../../../WC_WP_API/local_db/local_db";
 import ProductLoopAsideFilterAttribute from "./ProductLoopAsideFilterAttribute/ProductLoopAsideFilterAttribute";
+import { current } from "@reduxjs/toolkit";
 
 const ProductLoopAsideFilters = ({
   removeFilters,
@@ -31,6 +31,7 @@ const ProductLoopAsideFilters = ({
   const [temporaryArrayOfProducts, setTemporaryArrayOfProducts] = useState([]);
   /*push active attributes and options to array*/
   const locationState = useLocation();
+
   const checkTest = (option, attrName) => {
     let valueArray = { option, attrName };
     if (
@@ -103,6 +104,7 @@ const ProductLoopAsideFilters = ({
   //     );
   //   }
   // }, [goodsList]);
+
   useEffect(() => {
     activeAttributeList.length !== 0
       ? getProductsByFilterOption(
@@ -125,7 +127,6 @@ const ProductLoopAsideFilters = ({
       setActiveAttributeList([]);
     }
   }, [removeFilters]);
-
   return (
     <div className={classes.ProductLoopAsideFilters}>
       {loading ? (

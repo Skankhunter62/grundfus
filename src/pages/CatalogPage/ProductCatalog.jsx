@@ -4,11 +4,11 @@ import CatalogItemsLoop from "./CatalogItemsLoop/CatalogItemsLoop";
 import { useTypedSelector } from "../../store/hooks/useTypedSelector";
 import { useActions } from "../../store/hooks/useActions";
 import CatalogTopMenu from "./CatalogTopMenu/CatalogTopMenu";
+import { useSortingProductInCatalog } from "../../WC_WP_API/CustomHooksAndFunctions/wc_hooks/wc_hooks";
 import {
-  useSortingProductInCatalog,
-  useWCProductByAllCategories,
-} from "../../WC_WP_API/CustomHooksAndFunctions/wc_hooks/wc_hooks";
-import { addProductsFromCategoryRequest } from "../../custom_functions/ProductsFunctions/ProductsFunctions";
+  addProductsFromCategoryRequest,
+  addAllProducts,
+} from "../../custom_functions/ProductsFunctions/ProductsFunctions";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
@@ -18,7 +18,8 @@ const ProductCatalog = () => {
   const params = useParams();
 
   /*get redux store functions*/
-  const { addProducts, addProductsAttributes, removeProducts } = useActions();
+  const { addProducts, addProductsAttributes, removeAllProducts } =
+    useActions();
   /*get from redux store lists*/
   const {
     categories,
@@ -46,11 +47,76 @@ const ProductCatalog = () => {
   };
   /*sorting element in catalog*/
   const [selectedSort, setSelectedSort] = useState("nameTop");
+  const [calculatorProducts, setCalculatorProducts] = useState([]);
   /*initialize products lists from all goods list or category product list*/
+
+  let stateProps = [];
+  let fromCalc = false;
+  let fromSearch = false;
+  if (
+    locationState.state !== null &&
+    (locationState.state.fromCalc || locationState.state.fromSearch)
+  ) {
+    fromCalc = true;
+    stateProps = locationState.state;
+    if (locationState.state.fromSearch) {
+      fromSearch = true;
+    }
+  } else {
+    fromSearch = false;
+    fromCalc = false;
+  }
+  console.log("locationState", locationState);
+  // const getProductsByCalcOption = (
+  //   calcAttributes,
+  //   productsList,
+  //   setCalculatorProducts
+  // ) => {
+  //   if (productsList.length !== 0 && calcAttributes.length !== 0) {
+  //     let calculatorProducts = [];
+  //     productsList.map((product) => {
+  //       product?.attributes.map((attribute) => {
+  //         if (
+  //           attribute.name === calcAttributes.attrName &&
+  //           Number(attribute.options) >= Number(calcAttributes.option)
+  //         ) {
+  //           calculatorProducts.push(product);
+  //         }
+  //       });
+  //     });
+  //     console.log("found calc products! ", calculatorProducts);
+  //     setCalculatorProducts(calculatorProducts);
+  //   } else {
+  //     console.log("if not working, length: ", productsList.length);
+  //   }
+  // };
+  // useEffect(() => {
+  //   if (fromCalc) {
+  //     console.log("getting products by calc function...");
+  //     getProductsByCalcOption(
+  //       {
+  //         option: locationState.state.pressure,
+  //         attrName: "Максимальный напор",
+  //       },
+  //       productsList,
+  //       setCalculatorProducts
+  //     );
+  //     removeAllProducts();
+  //     addProducts(calculatorProducts);
+  //   }
+  // }, [locationState.state]);
+
+  useEffect(() => {
+    if (productsList.length === 0) {
+      addAllProducts(addProducts, stateProps);
+    }
+  }, []);
+
   useEffect(() => {
     /*check is categories list are loaded*/
-    if (categories.length !== 0) {
+    if (categories.length !== 0 && !fromCalc && !fromSearch) {
       /*call function which get products from category list*/
+      removeAllProducts();
       addProductsFromCategoryRequest(
         singleCategory,
         addProducts,
@@ -66,17 +132,14 @@ const ProductCatalog = () => {
   }, [params]);
 
   useEffect(() => {
-    if (locationState.state !== null && locationState.state.fromCalc) {
-      setProductArray([...goodsList]);
+    if (filterProductsList.length !== 0) {
+      setProductArray([...filterProductsList]);
+      console.log("filterProductsList", filterProductsList.length);
       setLoading(false);
-    } else {
-      if (filterProductsList.length !== 0) {
-        setProductArray([...filterProductsList]);
-        setLoading(false);
-      } else if (productsList.length !== 0) {
-        setProductArray([...productsList]);
-        setLoading(false);
-      }
+    } else if (productsList.length !== 0) {
+      setProductArray([...productsList]);
+      console.log("productsList", productsList.length);
+      setLoading(false);
     }
   }, [productsList, filterProductsList]);
 

@@ -5,7 +5,6 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import CalculatorInput from "../CalculatorInput/CalculatorInput";
-import { color } from "@mui/system";
 
 const CalculatorBottomSection = ({
   radioChange,
@@ -13,18 +12,47 @@ const CalculatorBottomSection = ({
   tableDistance,
   checkBoxValue,
 }) => {
-  const [pressure, setPressure] = useState(8);
-  const [inputValue, setInputValue] = useState(80);
+  const [pressure, setPressure] = useState(80);
+  const [outputValue, setOutputValue] = useState(8);
 
   const updatePressure = (pressure) => {
-    setInputValue(pressure);
-    setPressure(
-      (inputValue - tableDepth - tableDistance / 10 - (checkBoxValue - 1)) / 10
+    console.log(
+      "pressure: ",
+      pressure,
+      "tableDepth: ",
+      tableDepth,
+      "tableDistance: ",
+      tableDistance,
+      "checkBoxValue: ",
+      checkBoxValue
     );
+    setPressure(pressure);
+    setOutputValue(
+      pressure / 10 -
+        tableDepth / 10 -
+        tableDistance / 100 -
+        (checkBoxValue - 1) / 10
+    );
+    // setPressure(
+    //   (inputValue - tableDepth - tableDistance / 10 - (checkBoxValue - 1)) / 10
+    // );
   };
   useEffect(() => {
-    setPressure(
-      (inputValue - tableDepth - tableDistance / 10 - (checkBoxValue - 1)) / 10
+    console.log(
+      "pressure: ",
+      pressure,
+      "tableDepth: ",
+      tableDepth,
+      "tableDistance: ",
+      tableDistance,
+      "checkBoxValue: ",
+      checkBoxValue
+    );
+    setOutputValue(
+      pressure / 10 -
+        tableDepth / 10 -
+        tableDistance / 100 -
+        (checkBoxValue - 1) / 10
     );
   }, [tableDepth, tableDistance, checkBoxValue]);
   return (
@@ -73,7 +101,7 @@ const CalculatorBottomSection = ({
           </div>
           <div className={classes.CalculatorPressureLabel}>
             {" Расчетное давление воды на самом дальнем приборе в доме " +
-              pressure.toFixed(1) +
+              outputValue.toFixed(1) +
               " Бар"}
           </div>
           <div className={classes.CalculatorPressureLabelTip}>

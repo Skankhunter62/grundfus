@@ -1,4 +1,7 @@
-import { getWCProductBySingleCategory } from "../../WC_WP_API/CustomHooksAndFunctions/wc_hooks/wc_hooks";
+import {
+  getWCProductBySingleCategory,
+  getWCAllProducts,
+} from "../../WC_WP_API/CustomHooksAndFunctions/wc_hooks/wc_hooks";
 
 /*if we get all products list, we try to get attributes from this list*/
 export const getProductByGoodsList = (
@@ -37,4 +40,17 @@ export const addProductsFromCategoryRequest = (
       changeLoading
     );
   }
+};
+export const addAllProducts = (
+  addProducts,
+  stateProps,
+  addProductsAttributes,
+  changeLoading
+) => {
+  getWCAllProducts(
+    addProducts,
+    stateProps,
+    addProductsAttributes,
+    changeLoading
+  );
 };

@@ -89,22 +89,22 @@ export const useWCCategoriesList = () => {
       .then((response) => {
         if (response.status === 200) {
           categoryAddAllItems(response.data);
-          localStorage.setItem("categories", JSON.stringify(response.data));
-          if (singleCategory.length === 0) {
-            singleCategoryAddItem(
-              ...response.data.filter(
-                (cat) => cat.acf.default_catalog_category === true
-              )
-            );
-            localStorage.setItem(
-              "singleCategory",
-              JSON.stringify(
-                response.data.filter(
-                  (cat) => cat.acf.default_catalog_category === true
-                )
-              )
-            );
-          }
+          // localStorage.setItem("categories", JSON.stringify(response.data));
+          // if (singleCategory.length === 0) {
+          //   singleCategoryAddItem(
+          //     ...response.data.filter(
+          //       (cat) => cat.acf.default_catalog_category === true
+          //     )
+          //   );
+          //   localStorage.setItem(
+          //     "singleCategory",
+          //     JSON.stringify(
+          //       response.data.filter(
+          //         (cat) => cat.acf.default_catalog_category === true
+          //       )
+          //     )
+          //   );
+          // }
         }
       });
   }, []);
@@ -130,6 +130,71 @@ export const getWCProductBySingleCategory = (
     }
   });
 };
+
+/*get all products*/
+const getProductsByCalcOption = (calcAttributes, productsList) => {
+  if (productsList.length !== 0 && calcAttributes.length !== 0) {
+    let calculatorProducts = [];
+    productsList.map((product) => {
+      product?.attributes.map((attribute) => {
+        if (
+          attribute.name === calcAttributes.attrName &&
+          Number(attribute.options) >= Number(calcAttributes.option)
+        ) {
+          calculatorProducts.push(product);
+        }
+      });
+    });
+    console.log("found calc products! ", calculatorProducts);
+    return calculatorProducts;
+  } else {
+    console.log("if not working, length: ", productsList.length);
+    return [];
+  }
+};
+const getProductsBySearchOption = (searchQuery, productsList) => {
+  if (productsList.length !== 0) {
+    let searchProducts = [];
+    productsList.map((product) => {
+      if (product.name === searchQuery || searchQuery.includes(product.sku)) {
+        searchProducts.push(product);
+      }
+    });
+    console.log("found search products! ", searchProducts);
+    return searchProducts;
+  } else {
+    console.log("if not working, length: ", productsList.length);
+    return [];
+  }
+};
+
+export const getWCAllProducts = (addProducts, stateProps) => {
+  console.log("start fetching all products");
+  api.get(`products?status=publish`).then((response) => {
+    if (response.status === 200) {
+      if (stateProps.fromCalc) {
+        addProducts(
+          getProductsByCalcOption(
+            {
+              option: stateProps.pressure,
+              attrName: "Максимальный напор",
+            },
+            response.data
+          )
+        );
+      } else if (stateProps.fromSearch) {
+        addProducts(
+          getProductsBySearchOption(stateProps.searchQuery, response.data)
+        );
+      } else {
+        addProducts(response.data);
+      }
+    } else {
+      console.log("Error while fetching all products");
+    }
+  });
+};
+
 /*get all products by all categories*/
 export const useWCProductByAllCategories = () => {
   const { addGoodsListProducts } = useActions();
