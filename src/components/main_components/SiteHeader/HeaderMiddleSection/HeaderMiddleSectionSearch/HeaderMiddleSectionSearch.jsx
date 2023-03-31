@@ -25,7 +25,9 @@ const HeaderMiddleSectionSearch = () => {
           onChange={(e) => setSearch(e.target.value)}
           type="text"
           placeholder="Поиск по сайту"
+          minLength={3}
           className={classes.HeaderMiddleSectionSearchInput}
+          required
         />
       </form>
       <div className={classes.HeaderMiddleSectionSearchIconBlock}>

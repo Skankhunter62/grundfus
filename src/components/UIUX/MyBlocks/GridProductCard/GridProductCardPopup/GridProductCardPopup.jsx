@@ -62,7 +62,7 @@ const GridProductCardPopup = ({ product, changePopupState }) => {
                 <SaleProductCardLabel product={product} />
               )}
               <div className={classes.GridProductCardPopupInfoBlock}>
-                <GridProductCardInfoBlock product={product} />
+                <GridProductCardInfoBlock product={product} popup={true} />
               </div>
             </div>
             {parsed.length > 20 ? (

@@ -116,13 +116,15 @@ export const useWCCategoriesList = () => {
 export const getWCProductBySingleCategory = (
   categoryId,
   addProducts,
-  addProductsAttributes
+  addProductsAttributes,
+  changeLoading
 ) => {
   console.log("start fetching products");
   api.get(`products?category=${categoryId}`).then((response) => {
     if (response.status === 200) {
       addProducts(response.data);
       addProductsAttributes(response.data);
+      changeLoading(false);
     } else {
       console.log(
         "Problems with server connection, when try get products by category"
@@ -156,7 +158,11 @@ const getProductsBySearchOption = (searchQuery, productsList) => {
   if (productsList.length !== 0) {
     let searchProducts = [];
     productsList.map((product) => {
-      if (product.name === searchQuery || searchQuery.includes(product.sku)) {
+      if (
+        product.name === searchQuery ||
+        product.sku.includes(searchQuery) ||
+        product.name.includes(searchQuery)
+      ) {
         searchProducts.push(product);
       }
     });
@@ -168,27 +174,37 @@ const getProductsBySearchOption = (searchQuery, productsList) => {
   }
 };
 
-export const getWCAllProducts = (addProducts, stateProps) => {
+export const getWCAllProducts = (addProducts, stateProps, setLoading) => {
   console.log("start fetching all products");
   api.get(`products?status=publish`).then((response) => {
     if (response.status === 200) {
       if (stateProps.fromCalc) {
-        addProducts(
-          getProductsByCalcOption(
-            {
-              option: stateProps.pressure,
-              attrName: "Максимальный напор",
-            },
-            response.data
-          )
+        const calcProductsList = getProductsByCalcOption(
+          {
+            option: stateProps.pressure,
+            attrName: "Максимальный напор",
+          },
+          response.data
         );
+        if (calcProductsList.length !== 0) {
+          addProducts(calcProductsList);
+        } else {
+          addProducts(response.data);
+        }
       } else if (stateProps.fromSearch) {
-        addProducts(
-          getProductsBySearchOption(stateProps.searchQuery, response.data)
+        const searchProductsList = getProductsBySearchOption(
+          stateProps.searchQuery,
+          response.data
         );
+        if (searchProductsList.length !== 0) {
+          addProducts(searchProductsList);
+        } else {
+          addProducts(response.data);
+        }
       } else {
         addProducts(response.data);
       }
+      setLoading(false);
     } else {
       console.log("Error while fetching all products");
     }

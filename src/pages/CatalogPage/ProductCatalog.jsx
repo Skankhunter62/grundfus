@@ -47,7 +47,6 @@ const ProductCatalog = () => {
   };
   /*sorting element in catalog*/
   const [selectedSort, setSelectedSort] = useState("nameTop");
-  const [calculatorProducts, setCalculatorProducts] = useState([]);
   /*initialize products lists from all goods list or category product list*/
 
   let stateProps = [];
@@ -60,61 +59,32 @@ const ProductCatalog = () => {
     fromCalc = true;
     stateProps = locationState.state;
     if (locationState.state.fromSearch) {
+      fromCalc = false;
       fromSearch = true;
     }
   } else {
     fromSearch = false;
     fromCalc = false;
   }
-  console.log("locationState", locationState);
-  // const getProductsByCalcOption = (
-  //   calcAttributes,
-  //   productsList,
-  //   setCalculatorProducts
-  // ) => {
-  //   if (productsList.length !== 0 && calcAttributes.length !== 0) {
-  //     let calculatorProducts = [];
-  //     productsList.map((product) => {
-  //       product?.attributes.map((attribute) => {
-  //         if (
-  //           attribute.name === calcAttributes.attrName &&
-  //           Number(attribute.options) >= Number(calcAttributes.option)
-  //         ) {
-  //           calculatorProducts.push(product);
-  //         }
-  //       });
-  //     });
-  //     console.log("found calc products! ", calculatorProducts);
-  //     setCalculatorProducts(calculatorProducts);
-  //   } else {
-  //     console.log("if not working, length: ", productsList.length);
-  //   }
-  // };
-  // useEffect(() => {
-  //   if (fromCalc) {
-  //     console.log("getting products by calc function...");
-  //     getProductsByCalcOption(
-  //       {
-  //         option: locationState.state.pressure,
-  //         attrName: "Максимальный напор",
-  //       },
-  //       productsList,
-  //       setCalculatorProducts
-  //     );
-  //     removeAllProducts();
-  //     addProducts(calculatorProducts);
-  //   }
-  // }, [locationState.state]);
 
   useEffect(() => {
     if (productsList.length === 0) {
-      addAllProducts(addProducts, stateProps);
+      setLoading(true);
+      addAllProducts(addProducts, stateProps, setLoading);
     }
   }, []);
+
+  // rerenders products 2nd time only for search inside a catalog
+  useEffect(() => {
+    setLoading(true);
+    removeAllProducts();
+    addAllProducts(addProducts, stateProps, setLoading);
+  }, [fromSearch]);
 
   useEffect(() => {
     /*check is categories list are loaded*/
     if (categories.length !== 0 && !fromCalc && !fromSearch) {
+      setLoading(true);
       /*call function which get products from category list*/
       removeAllProducts();
       addProductsFromCategoryRequest(
@@ -134,11 +104,9 @@ const ProductCatalog = () => {
   useEffect(() => {
     if (filterProductsList.length !== 0) {
       setProductArray([...filterProductsList]);
-      console.log("filterProductsList", filterProductsList.length);
       setLoading(false);
     } else if (productsList.length !== 0) {
       setProductArray([...productsList]);
-      console.log("productsList", productsList.length);
       setLoading(false);
     }
   }, [productsList, filterProductsList]);

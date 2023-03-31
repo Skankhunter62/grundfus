@@ -44,12 +44,14 @@ export const addProductsFromCategoryRequest = (
 export const addAllProducts = (
   addProducts,
   stateProps,
+  setLoading,
   addProductsAttributes,
   changeLoading
 ) => {
   getWCAllProducts(
     addProducts,
     stateProps,
+    setLoading,
     addProductsAttributes,
     changeLoading
   );

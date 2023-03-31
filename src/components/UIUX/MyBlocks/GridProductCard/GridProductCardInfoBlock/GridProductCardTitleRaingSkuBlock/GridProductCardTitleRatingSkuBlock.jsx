@@ -4,10 +4,10 @@ import ProductCardTitle from "../../../../FontsButtons/Titles/ProductCardTitle/P
 import MaterialUiRating from "../../../../MaterialUIRating/MaterialUIRating";
 import MyCardSkuText from "../../../../FontsButtons/Texts/Product/ProductSkuText/MyCardSkuText";
 
-const GridProductCardTitleRatingSkuBlock = ({ product }) => {
+const GridProductCardTitleRatingSkuBlock = ({ product, popup }) => {
   return (
     <div className={classes.gridProductCardTitleRatingSkuBlock}>
-      <ProductCardTitle product={product} />
+      <ProductCardTitle product={product} popup={popup} />
       <div className={classes.test}>
         <MaterialUiRating product={product} fromCatalog={true} />
       </div>
