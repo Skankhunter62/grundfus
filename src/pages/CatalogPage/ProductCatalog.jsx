@@ -102,6 +102,7 @@ const ProductCatalog = () => {
   }, [params]);
 
   useEffect(() => {
+    setLoading(true);
     if (filterProductsList.length !== 0) {
       setProductArray([...filterProductsList]);
       setLoading(false);
