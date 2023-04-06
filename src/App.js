@@ -10,6 +10,7 @@ import ProductCatalog from "./pages/CatalogPage/ProductCatalog";
 import ProductLayout from "./router_layout/ProductLayout/ProductLayout";
 import Error from "./pages/ErrorPage/Error";
 import CatalogLayout from "./router_layout/CatalogLayout/CatalogLayout";
+import TestCatalogLayout from "./router_layout/TestCatalogLayout/TestCatalogLayout";
 import WishListLayout from "./router_layout/ActionsLayout/WishListlayout/WishListLayout";
 import CartLayout from "./router_layout/ActionsLayout/CartLayout/CartLayout";
 import CompareLayout from "./router_layout/ActionsLayout/CompareLayout/CompareLayout";
@@ -38,6 +39,16 @@ function App() {
           <Route path=":category_slug" element={<ProductCatalog />} />
         </Route>
         <Route path="/catalog/:category_slug/:slug" element={<ProductLayout />}>
+          <Route index element={<ProductPage />} />
+        </Route>
+        <Route path="/test_catalog" element={<CatalogLayout />}>
+          <Route index element={<ProductCatalog />} />
+          <Route path=":category_slug" element={<ProductCatalog />} />
+        </Route>
+        <Route
+          path="/test_catalog/:category_slug/:slug"
+          element={<ProductLayout />}
+        >
           <Route index element={<ProductPage />} />
         </Route>
         <Route path="*" element={<Error />} />

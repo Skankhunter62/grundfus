@@ -1,0 +1,23 @@
+.MyPriceFilter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.MyPriceFilterInputsBlock {
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.MyPriceFilterSpan {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #003767;
+}

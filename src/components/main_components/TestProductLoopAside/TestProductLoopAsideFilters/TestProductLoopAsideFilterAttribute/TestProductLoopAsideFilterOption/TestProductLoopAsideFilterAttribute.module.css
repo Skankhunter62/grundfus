@@ -1,0 +1,8 @@
+.MyFilterOptionBlock {
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+.MyFilterOptionCheckBox {
+  margin-right: 10px;
+}
